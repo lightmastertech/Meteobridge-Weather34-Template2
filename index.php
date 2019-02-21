@@ -1,4 +1,22 @@
 <?php header('Content-type: text/html; charset=utf-8');error_reporting(0);
+$settings1file = './settings1.php';
+$settings1filedefault = './settings1.default.php';
+if (!file_exists($settings1file)) {
+  if(!file_exists($settings1filedefault)) {
+    $fileopen = fopen("$settings1filedefault", 'w');
+    $options = array(
+      CURLOPT_FILE    => $fileopen,
+      CURLOPT_TIMEOUT => 28800,
+      CURLOPT_URL     => 'https://raw.githubusercontent.com/lightmaster/Meteobridge-Weather34-Template/master/settings1.default.php',
+    );
+    $ch = curl_init();
+    curl_setopt_array($ch, $options);
+    curl_exec($ch);
+    curl_close($ch);
+    fclose($fileopen);
+ }
+  copy("$settings1filedefault", "$settings1file");
+}
 ####################################################################################################
 # HOME WEATHER STATION TEMPLATE by BRIAN UNDERDOWN 2015-2016-2017-2018                             #
 # CREATED FOR HOMEWEATHERSTATION TEMPLATE at                									   #
