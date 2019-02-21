@@ -11,6 +11,18 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $analytics; ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', <?php echo $analytics; ?>);
+  </script>
 <title><?php echo $stationlocation; ?> Home Weather Station</title>
 <meta content="Home weather station providing current weather conditions for <?php echo $stationlocation;?>" name="description">
 <!--Google / Search Engine Tags -->

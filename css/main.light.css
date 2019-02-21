@@ -2089,45 +2089,7 @@ a:hover {
   position: absolute
 }
 
-@media screen and (max-width:768px) {
-  .weather-container {
-    display: inline;
-    background-color: 0;
-    text-rendering: optimizeLegibility;
-    -o-font-smoothing: antialiased;
-    font-family: arial, system;
-    overflow: hidden
-  }
-  .a,
-  .chart,
-  .chartforecast,
-  .w34uptime,
-  .weather2-container,
-  .weatherfooter-container,
-  header {
-    display: none
-  }
-  .weather-item {
-    float: none;
-    width: 310px;
-    margin: 10px auto 0;
-    overflow: hidden
-  }
-  #icon {
-    width: 55px;
-    height: 43px;
-    float: left;
-    padding: 5px;
-    margin: 0 10px -5px
-  }
-  .c {
-    width: auto;
-    left: 40px;
-    right: 40px
-  }
-}
-
-@media screen and (max-width:1024px) and (orientation:portrait) {
+@media screen and (max-width:760px) {
   .weather-container {
     display: inline;
     width: 300px;
@@ -2141,7 +2103,6 @@ a:hover {
   }
   .a,
   .chart,
-  .chartforecast,
   .weather2-container,
   .weatherfooter-container,
   header {
@@ -2152,44 +2113,6 @@ a:hover {
     width: 310px;
     margin: 10px auto 0;
     overflow: hidden
-  }
-}
-
-@media screen and (max-width:640px) {
-  .weather-container {
-    display: inline;
-    background-color: 0;
-    text-rendering: optimizeLegibility;
-    -o-font-smoothing: antialiased;
-    font-family: arial, system;
-    overflow: hidden
-  }
-  .a,
-  .chart,
-  .chartforecast,
-  .w34uptime,
-  .weather2-container,
-  .weatherfooter-container,
-  header {
-    display: none
-  }
-  .weather-item {
-    float: none;
-    width: 310px;
-    margin: 10px auto 0;
-    overflow: hidden
-  }
-  #icon {
-    width: 55px;
-    height: 43px;
-    float: left;
-    padding: 5px;
-    margin: 0 0 0 10px
-  }
-  .c {
-    width: auto;
-    left: 40px;
-    right: 40px
   }
 }
 
@@ -3661,7 +3584,7 @@ tsteady {
   font-size: 12px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:460px) {
   header {
     display: block;
     height: 0
@@ -3688,7 +3611,7 @@ tsteady {
   }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:766px) {
   header {
     display: block;
     height: 0
@@ -4020,6 +3943,13 @@ input[type=checkbox] {
   cursor: pointer;
   border-bottom: 0;
   width: 240px
+}
+
+.weather34sidebarMenuInner li.header {
+  font-size: 15px;
+  text-align: left;
+  color:#ff8841;
+  font-weight: bold
 }
 
 .weather34sidebarMenuInner li span {
@@ -5724,6 +5654,12 @@ smallwindunit {
 
 img {
   shape-rendering: auto
+}
+
+img.menuimg {
+	max-width:60px;
+	max-height: 30px;
+	height: auto;
 }
 
 .daylightword {

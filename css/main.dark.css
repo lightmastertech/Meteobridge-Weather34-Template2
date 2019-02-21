@@ -1840,7 +1840,7 @@ suptemp3 {
   background: rgba(37, 41, 45, .7)
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:760px) {
   .weather-container {
     display: inline;
     width: 300px;
@@ -1852,8 +1852,6 @@ suptemp3 {
   }
   .a,
   .chart,
-  .chartforecast,
-  .w34uptime,
   .weather2-container,
   .weatherfooter-container,
   header {
@@ -1869,65 +1867,6 @@ suptemp3 {
     width: auto;
     left: 40px;
     right: 40px
-  }
-}
-
-@media screen and (max-width:1024px) and (orientation:portrait) {
-  .weather-container {
-    display: inline;
-    width: 300px;
-    height: 200px;
-    background-color: 0;
-    text-rendering: optimizeLegibility;
-    font-family: arial, system;
-    overflow: hidden
-  }
-  .a,
-  .chart,
-  .chartforecast,
-  .weather2-container,
-  .weatherfooter-container,
-  header {
-    display: none
-  }
-  .weather-item {
-    float: none;
-    width: 310px;
-    margin: 10px auto 0;
-    overflow: hidden
-  }
-  .c {
-    width: auto;
-    left: 40px;
-    right: 40px
-  }
-}
-
-@media screen and (max-width:640px) {
-  .weather-container {
-    display: inline;
-    width: 300px;
-    height: 200px;
-    background-color: 0;
-    text-rendering: optimizeLegibility;
-    font-family: arial, system;
-    overflow: hidden
-  }
-  .a,
-  .c,
-  .chart,
-  .chartforecast,
-  .w34uptime,
-  .weather2-container,
-  .weatherfooter-container,
-  header {
-    display: none
-  }
-  .weather-item {
-    float: none;
-    width: 310px;
-    margin: 10px auto 0;
-    overflow: hidden
   }
 }
 
@@ -3349,7 +3288,7 @@ convtext {
   font-size: 12px
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:460px) {
   header {
     display: block;
     height: 0
@@ -3376,7 +3315,7 @@ convtext {
   }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:766px) {
   header {
     display: block;
     height: 0
@@ -3775,6 +3714,13 @@ input[type=checkbox] {
 .luxrate,
 rainu {
   padding-left: 0
+}
+
+.weather34sidebarMenuInner li.header {
+  font-size: 15px;
+  text-align: left;
+  color:#ff8841;
+  font-weight: bold
 }
 
 .weather34sidebarMenuInner li span {
@@ -5709,6 +5655,12 @@ smallwindunit {
 
 img {
   shape-rendering: auto
+}
+
+img.menuimg {
+	max-width:60px;
+	max-height: 30px;
+	height: auto;
 }
 
 .sundialcontainerdiv2,

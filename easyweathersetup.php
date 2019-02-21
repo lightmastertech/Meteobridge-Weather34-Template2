@@ -114,6 +114,19 @@ body{font-size:12px;font-family:Arial,Helvetica,sans-serif;color:#777;background
 </style>
 <script src="js/jquery.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $analytics; ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', <?php echo $analytics; ?>);
+  </script>
+
  </head>
         
     <body>

@@ -27,7 +27,20 @@ include('../common.php');
 		
 	';
 	
-	$date= date('D jS Y');	$weatherfile = date('Y');?><br>
+	$date= date('D jS Y');	$weatherfile = date('Y');?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $analytics; ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '<?php echo $analytics; ?>');
+  </script>
+	<br>
     	<script type="text/javascript">
         $(document).ready(function () {
 		var dataPoints1 = [];
