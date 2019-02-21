@@ -88,3 +88,4 @@ $defaultlanguage   = "en";
 $language    = "en";
 $password    = "";
 $flag   = "en";
+$analytics = 'UA-123456789-0';
