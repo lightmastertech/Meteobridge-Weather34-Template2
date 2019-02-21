@@ -5396,7 +5396,7 @@ topyellow1 {
 smalluvunit {
   font-size: .55rem;
   font-family: Arial, Helvetica, system;
-  font-weight: 600
+  font-weight: 400
 }
 
 .uvcontainer1 {
@@ -5524,7 +5524,7 @@ topyellow2 {
   font-family: weathertext2;
   width: 3.3rem;
   height: 2.4rem;
-  font-size: .8rem;
+  font-size: .95em;
   padding-top: 7px;
   color: #fff;
   border-bottom: 11px solid #e6e8ef;
@@ -5544,7 +5544,7 @@ topyellow2 {
 .topmin {
   position: absolute;
   margin-top: 39px;
-  font-size: 0;
+  font-size: 12px;
   padding-right: 4px;
   padding-left: 0
 }
