@@ -98,6 +98,8 @@ $defaultlanguage   = "'.$_POST["defaultlanguage"]. '";
 $language    = "'.$_POST['language']. '";
 $password    = "'.$_POST['password']. '";
 $flag   = "'.$_POST["flag"]. '";
+
+$analytics = "'.$_POST["analytics"]. '";
 ';
  
 $fp = FOPEN("settings1.php", "w") or die("Unable to open settings1.php file check file permissions !");
@@ -1891,10 +1893,36 @@ Weatherflow Map Zoom</div>
 </svg> <span style="color:#777;">enter your <strong>PurpleAir </strong> station id example <strong><span style="color:rgba(86, 95, 103, 1.000);"> 1200</strong></span></span>
     
     
-        
+        <br>
+    
+    
+    <p>
+      <br>
+           
+  <div class="seperator"></div>
+     
+     
+     
+     <span style="color:#F75C46;"><svg id="i-activity" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M4 16 L11 16 14 29 18 3 21 16 28 16" />
+</svg> Google Analytics</span><br>
+ 
+  <div class= "stationvalue">Google Analytics Code: </div> 
+    <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg>
+
+    <input name="analytics" type="text" id="analytics" value="<?php echo $analytics ;?>" class="choose"> 
     
     
     
+    
+    
+    <br> <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M16 14 L16 23 M16 8 L16 10" />
+    <circle cx="16" cy="16" r="14" />
+</svg> <span style="color:#777;">enter your <strong>Analytics Code</strong>.  Example: <strong><span style="color:rgba(86, 95, 103, 1.000);">UA-123456789-0</strong></span></span>
+     <br>
     
     
     
@@ -1958,6 +1986,7 @@ Check<b>WX</b> Metar API KEY you need to sign up here for free API key <a href="
     
     <p> 
        </div>
+  
    
 <div class="weatheroptions">
 
@@ -1969,7 +1998,7 @@ Check<b>WX</b> Metar API KEY you need to sign up here for free API key <a href="
 
 
 
-
+</p>
   </div>
   
   
