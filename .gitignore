@@ -4,9 +4,11 @@ camplus.jpg
 timelapse/weather*
 timelapse/pics/*
 timelapse/
+timelapse
 
 #Scripts
 scripts/
+scripts
 
 #Settings
 settings1.php
