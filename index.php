@@ -39,7 +39,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
     }
     gtag('js', new Date());
 
-    gtag('config', <?php echo $analytics; ?>);
+    gtag('config', '<?php echo $analytics; ?>');
   </script>
 <title><?php echo $stationlocation; ?> Home Weather Station</title>
 <meta content="Home weather station providing current weather conditions for <?php echo $stationlocation;?>" name="description">
@@ -156,10 +156,8 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
   <!--position 12th module (second to last) for homeweatherstation template-->
   <div class="weather-item"><div class="chartforecast" >
   <span class="yearpopup">
-<?php if ($position12=='webcamsmall.php'){echo'<a alt="Webcam " title="Webcam " href="cam.php" data-featherlight="iframe">'. $webcamicon. " Live Webcam </a></span>";}?>
+<?php if ($position12=='webcamsmall.php' OR $position12=='indoortemperature.php' OR $position12=='moonphase.php'){echo'<a alt="Webcam " title="Webcam " href="cam.php" data-featherlight="iframe">'. $webcamicon. ' Live Webcam </a></span><span class="yearpopup"> <a alt="Indoor Guide" title="Indoor Guide" href="homeindoor.php" data-featherlight="iframe">'. $chartinfo. ' Indoor Guide </a></span><span class="yearpopup"> <a alt="Moon Info" title="Moon Info" href="mooninfo.php" data-featherlight="iframe">'. $chartinfo. ' Moon Info </a></span>';}?>
 <?php if ($position12=='airqualitymodule.php') {echo ' <a alt="air quality information" title="air quality information" href="purpleair.php" data-featherlight="iframe">'. $chartinfo. " Air Quality | Cloudbase </a></span>";}?>
-<?php if ($position12=='indoortemperature.php') {echo ' <a alt="Indoor Guide" title="Indoor Guide" href="homeindoor.php" data-featherlight="iframe">'. $chartinfo. " Indoor Guide </a></span>";}?>
-<?php if ($position12=='moonphase.php') {echo ' <a alt="Moon Info" title="Moon Info" href="mooninfo.php" data-featherlight="iframe">'. $chartinfo. " Moon Info </a></span>";}?>
 <?php if ($position12=='weather34uvsolar.php') {echo ' <a alt="UV Guide" title="UV Guide" href="uvindex.php" data-featherlight="iframe">'. $chartinfo. " UV Guide  </a></span>";} ?>
 <?php if ($position12=='weather34uvsolar.php') {echo ' <span class="yearpopup"><a alt="UV Alamanac" title="UV Alamanac" href="uvalmanac.php" data-featherlight="iframe">&nbsp;'. $chartinfo. " UV Alamanac </a></span>";}?>
 <?php if ($position12=='weather34uvsolar.php') {echo '<span class="yearpopup"> <a alt="Solar Alamanac" title="Solar Alamanac" href="solaralmanac.php" data-featherlight="iframe">'. $chartinfo. " Solar Alamanac </a></span>";}?>
@@ -170,17 +168,15 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
  <!--position last module for homeweatherstation template-->
   <div class="weather-item"><div class="chartforecast" >
   <span class="yearpopup">
-<?php if ($positionlastmodule=='webcamsmall.php'){echo'<a alt="Webcam " title="Webcam " href="cam.php" data-featherlight="iframe">'. $webcamicon. " Live Webcam </a></span>";}?>
+<?php if ($positionlastmodule=='webcamsmall.php' OR $positionlastmodule=='indoortemperature.php' OR $positionlastmodule=='moonphase.php'){echo'<a alt="Webcam " title="Webcam " href="cam.php" data-featherlight="iframe">'. $webcamicon. ' Live Webcam </a></span><span class="yearpopup"> <a alt="Indoor Guide" title="Indoor Guide" href="homeindoor.php" data-featherlight="iframe">'. $chartinfo. ' Indoor Guide </a></span><span class="yearpopup"> <a alt="Moon Info" title="Moon Info" href="mooninfo.php" data-featherlight="iframe">'. $chartinfo. ' Moon Info </a></span>';}?>
 <?php if ($positionlastmodule=='airqualitymodule.php') {echo ' <a alt="air quality" title="air quality" href="purpleair.php" data-featherlight="iframe">'. $chartinfo. " Air Quality | Cloudbase </a></span>";}?>
-<?php if ($positionlastmodule=='indoortemperature.php') {echo ' <a alt="Indoor Guide" title="Indoor Guide" href="homeindoor.php" data-featherlight="iframe">'. $chartinfo. " Indoor Guide </a></span>";} ?>
-<?php if ($positionlastmodule=='moonphase.php') {echo ' <a alt="Moon Info" title="Moon Info" href="mooninfo.php" data-featherlight="iframe">'. $chartinfo. " Moon Info </a></span>";}?>
 <?php if ($positionlastmodule=='weather34uvsolar.php') {echo ' <a alt="UV Guide" title="UV Guide" href="uvindex.php" data-featherlight="iframe">'. $chartinfo. " UV Guide  </a></span>";} ?>
 <?php if ($positionlastmodule=='weather34uvsolar.php') {echo ' <span class="yearpopup"><a alt="UV Alamanac" title="UV Alamanac" href="uvalmanac.php" data-featherlight="iframe">&nbsp;'. $chartinfo. " UV Alamanac </a></span>";} ?>
 <?php if ($positionlastmodule=='weather34uvsolar.php') {echo '<span class="yearpopup"> <a alt="Solar Alamanac" title="Solar Alamanac" href="solaralmanac.php" data-featherlight="iframe">'. $chartinfo. " Solar Alamanac </a></span>";}?>
 <?php if ($positionlastmodule=='solaruvds.php') {echo ' <a alt="UV Guide" title="UV Guide" href="uvindexds.php" data-featherlight="iframe">'. $chartinfo. " UV Guide </a></span>";}?>
 <?php if ($positionlastmodule=='solaruvds.php') {echo ' <span class="yearpopup"><a alt="Solar Alamanac" title="Solar Alamanac" href="solaralmanac.php" data-featherlight="iframe">'. $chartinfo. " Solar Alamanac </a></span>";}?>
 <?php if ($positionlastmodule=='eq.php') {echo ' <a alt="Earthquakes Worldwide" title="Earthquakes Worldwide" href="eqlist.php" data-featherlight="iframe">'. $chartinfo. " Worldwide Earthquakes </a></span>";}?>
-</div><span class='moduletitle'><?php echo $positionlastmoduletitle?></span></span><div id="dldata"></div>
+</div><span class='moduletitle'><?php echo $positionlastmoduletitle?></span><div class="updatedtime"><span><?php if(file_exists($livedata2)&&time()- filemtime($livedata2)>300)echo $offline. '<offline> Offline </offline>';else echo $online." ".$weather["time"];?></div></span><div id="dldata"></div>
 </div></div>
  <!--end outdoor data for homeweatherstation template-->
   <!--footer area for homeweatherstation template warning dont mess with this below this line unless you really know what you are doing-->
