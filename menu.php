@@ -35,31 +35,21 @@ else echo' <a class="menucolor" href="./?units=metric">Units</a>';?></div>
         </li>
         <li><a href=<?php if($theme=='dark' ){echo '?theme=light';}else{echo '?theme=dark';}?>><?php echo $arrow34icon;?><?php if($theme=='dark'){echo' Light Theme';}else{echo' Dark Theme';}?></a></li>
         <p>
-          <li><a href="#">UNITS</a></li>
+          <li class="header">UNITS</li>
           <?php if($units!='us'){
 	echo '<li> <a  href="./?units=us"> '.$arrow34icon.'  Non Metric  '.$weatherunitfm.'</a><br />  ';}if($units!='metric'){
 	echo '<li> <a  href="./?units=metric"> '.$arrow34icon.' Metric '.$weatherunitcm.'</a><br />  ';}if($units!='uk'){
 	echo '<li> <a  href="./?units=uk">  '.$arrow34icon.' UK ( MPH)  '.$weatherunitcm.'</a><br /> ';}if($units!='scandinavia'){
 	echo '<li> <a  href="./?units=scandinavia"> '.$arrow34icon.' M/S  '.$weatherunitcm.'</a>';}?>
-<?php
-          echo '<li class="header">LINKS</li>';
-          echo '<li><a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KGABAXLE9" title="KGABAXLE9 on Weather Underground" target="_blank"><img class="menuimg" src="https://cdn6.aptoide.com/imgs/8/a/5/8a510249f0de42d1e4448ccbcd1bfbd5_icon.png?w=240" /> KGABAXLE9</a> </li>';
-          echo '<li>
-            <a href="http://www.findu.com/cgi-bin/wxpage.cgi?call=FW3611!Baxley&last=48" title="FW3611 on Findu.com" target="_blank">
-               '.$arrow34icon.' FW3611 on FindU.com</a>
-          </li>';
-          echo '<li>
-            <a href="https://www.wrh.noaa.gov/mesowest/getobext.php?wfo=lox&sid=F3611" title="F3611 on NOAA Meso West" target="_blank"><img class="menuimg" src="https://madis.ncep.noaa.gov/images/header-noaa.png" style="max-width:30px" /> F3611 on NOAA</a>
-          </li>';
-          echo '<li>
-            <a href="https://madis-data.ncep.noaa.gov/MadisSurface/?CenterLAT=31.79&CenterLON=-82.39&Zoom=11.00&StationID=F3611" title="F3611 on MADIS Map" target="_blank"><img class="menuimg" src="https://madis.ncep.noaa.gov/images/header-noaa.png" style="max-width:30px" /> F3611 on MADIS Map</a>
-          </li>';
-          echo '<li><a href="https://mesowest.utah.edu/cgi-bin/droman/meso_base.cgi?stn=F3611" title="F3611 on Meso West" target="_blank"><img class="menuimg" src="https://mesowest.utah.edu/images/mesowest_static/mesowest_white_red_30.jpg" style="max-width:75px" /> F3611 on Meso West</a></li>';
-          echo '<li>
-            <a href="https://weather.gladstonefamily.net/site/F3611" title="F3611 on CWOP" target="_blank">
-              '.$arrow34icon.' 3611 on CWOP</a>
-          </li>';
-          ?>
+<?php if($extralinks=='yes') {
+          echo('<li class="header">LINKS</li>');
+          if($wunderground=='yes') {echo '<li><a href="https://www.wunderground.com/personal-weather-station/dashboard?ID='.$id.'" title="'.$id.' on Weather Underground" target="_blank"><img class="menuimg" src="https://cdn6.aptoide.com/imgs/8/a/5/8a510249f0de42d1e4448ccbcd1bfbd5_icon.png?w=240" /> '.$id.'</a> </li>';}
+          if($findu=='yes') {echo '<li><a href="http://www.findu.com/cgi-bin/wxpage.cgi?call='.$finduid.'&last=48" title="'.$finduid.' on Findu.com" target="_blank">'.$arrow34icon.' '.$finduid.' on FindU.com</a></li>';}
+          if($noaa=='yes') {echo '<li><a href="https://www.wrh.noaa.gov/mesowest/getobext.php?wfo=lox&sid='.$cwopid.'" title="'.$cwopid.' on NOAA Meso West" target="_blank"><img class="menuimg" src="https://madis.ncep.noaa.gov/images/header-noaa.png" style="max-width:30px" /> '.$cwopid.' on NOAA</a></li>';}
+          if($madis=='yes') {echo '<li><a href="https://madis-data.ncep.noaa.gov/MadisSurface/?CenterLAT='.$lat.'&CenterLON='.$lon.'&Zoom=11.00&StationID='.$cwopid.'" title="'.$cwopid.' on MADIS Map" target="_blank"><img class="menuimg" src="https://madis.ncep.noaa.gov/images/header-noaa.png" style="max-width:30px" /> '.$cwopid.' on MADIS Map</a></li>';}
+          if($mesowest=='yes') {echo '<li><a href="https://mesowest.utah.edu/cgi-bin/droman/meso_base.cgi?stn='.$cwopid.'" title="'.$cwopid.' on Meso West" target="_blank"><img class="menuimg" src="https://mesowest.utah.edu/images/mesowest_static/mesowest_white_red_30.jpg" style="max-width:75px" /> '.$cwopid.' on Meso West</a></li>';}
+          if($cwop=='yes') {echo '<li><a href="https://weather.gladstonefamily.net/site/'.$cwopid.'" title="'.$cwopid.' on CWOP" target="_blank">'.$arrow34icon.' '.$cwopid.' on CWOP</a></li>';}
+      }?>
           <li class="header">EXTRAS</li>
           
             <?php if($weatherflowoption=="yes"){ echo "<li><a href=https://staging.smartweather.weatherflow.com/map/".$lat."/".$lon."/".$weatherflowmapzoom." data-featherlight=iframe>". $locationinfo." Weatherflow Map </a></li>" ;}
