@@ -1,41 +1,88 @@
-<header style="z-index:auto"><!---start menu.php 23-02-2018--><h1><ogreyh1><?php echo $stationName;?>&nbsp; Home &#8226; Weather &#8226; Station </ogreyh1></h1>
-<button class="button right"></button><div class='w34logo'><?php if($units!='us'){echo' <a  class="menucolor" href="./?units=us">'.$weatherunitfmenu.'</a>';}
+<header style="z-index:auto">
+  <!---start menu.php 23-02-2018-->
+  <h1>
+    <ogreyh1>
+      <?php echo $stationName;?>&nbsp; Home &#8226; Weather &#8226; Station </ogreyh1>
+  </h1>
+  <button class="button right"></button>
+  <div class='w34logo'>
+    <?php if($units!='us'){echo' <a  class="menucolor" href="./?units=us">'.$weatherunitfmenu.'</a>';}
 else if($units!='metric'){echo' <a  class="menucolor" href="./?units=metric">'.$weatherunitcmenu.'</a>';}
 else echo' <a class="menucolor" href="./?units=metric">Units</a>';?></div>
-<div class="w34uptime"><?php echo $info." Uptime: "?><?php if ($uptimedays <1 ){echo "$uptimehours Hours";} else echo "$uptimedays Days";?></div>
- <input type="checkbox" class="openweather34sidebarMenu" id="openweather34sidebarMenu">
+  <div class="w34uptime">
+    <?php echo $info." Uptime: "?>
+    <?php if ($uptimedays <1 ){echo "$uptimehours Hours";} else echo "$uptimedays Days";?>
+  </div>
+  <input type="checkbox" class="openweather34sidebarMenu" id="openweather34sidebarMenu">
   <label for="openweather34sidebarMenu" class="weather34sidebarIconToggle">
     <div class="weather34spinner weather34cross part-1"></div>
     <div class="weather34spinner weather34horizontal"></div>
     <div class="weather34spinner weather34cross part-2"></div>    
   </label>
- <div id="weather34sidebarMenu">
-<ul class="weather34sidebarMenuInner">
-<br /><br /><br />
-<li><a href="#">ADMIN</a></li>
-<li><a href="easyweathersetup.php" target="_blank" title="WEATHERSTATION SETTINGS PAGE"><?php echo $weather34settingsicon; echo " ",$lang['Settings']; ?> </a></li> 
-<p>
-<li><a href="#">USER PREFERENCES</a></li>
-<li><a href="index.php" title="WEATHERSTATION HOME PAGE"> <?php echo $weather34homeicon; echo ' Home'; ?> </a></li>  
-<li><a href=<?php if($theme=='dark'){echo'?theme=light';}else{echo'?theme=dark';}?>><?php echo $arrow34icon;?><?php if($theme=='dark'){echo' Light Theme';}else{echo' Dark Theme';}?></a></li>
-<p>
-<li><a href="#">UNITS</a></li>
-<?php if($units!='us'){
+  <div id="weather34sidebarMenu">
+    <ul class="weather34sidebarMenuInner">
+      <br /><br /><br />
+      <li class="header">ADMIN</li>
+      <li>
+        <a href="easyweathersetup.php" target="_blank" title="WEATHERSTATION SETTINGS PAGE">
+          <?php echo $weather34settingsicon; echo " ",$lang['Settings']; ?> </a>
+      </li>
+      <p>
+        <li class="header">USER PREFERENCES</li>
+        <li>
+          <a href="index.php" title="WEATHERSTATION HOME PAGE">
+            <?php echo $weather34homeicon; echo ' Home'; ?> </a>
+        </li>
+        <li><a href=<?php if($theme=='dark' ){echo '?theme=light';}else{echo '?theme=dark';}?>><?php echo $arrow34icon;?><?php if($theme=='dark'){echo' Light Theme';}else{echo' Dark Theme';}?></a></li>
+        <p>
+          <li><a href="#">UNITS</a></li>
+          <?php if($units!='us'){
 	echo '<li> <a  href="./?units=us"> '.$arrow34icon.'  Non Metric  '.$weatherunitfm.'</a><br />  ';}if($units!='metric'){
 	echo '<li> <a  href="./?units=metric"> '.$arrow34icon.' Metric '.$weatherunitcm.'</a><br />  ';}if($units!='uk'){
 	echo '<li> <a  href="./?units=uk">  '.$arrow34icon.' UK ( MPH)  '.$weatherunitcm.'</a><br /> ';}if($units!='scandinavia'){
 	echo '<li> <a  href="./?units=scandinavia"> '.$arrow34icon.' M/S  '.$weatherunitcm.'</a>';}?>
-
-<li><a href="#">EXTRAS</a></li>
-<li>
-<?php if($weatherflowoption=="yes"){ echo "<a href=https://staging.smartweather.weatherflow.com/map/".$lat."/".$lon."/".$weatherflowmapzoom." data-featherlight=iframe>". $locationinfo." Weatherflow Map </a></li>" ;}
+<?php
+          echo '<li class="header">LINKS</li>';
+          echo '<li><a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KGABAXLE9" title="KGABAXLE9 on Weather Underground" target="_blank"><img class="menuimg" src="https://cdn6.aptoide.com/imgs/8/a/5/8a510249f0de42d1e4448ccbcd1bfbd5_icon.png?w=240" /> KGABAXLE9</a> </li>';
+          echo '<li>
+            <a href="http://www.findu.com/cgi-bin/wxpage.cgi?call=FW3611!Baxley&last=48" title="FW3611 on Findu.com" target="_blank">
+               '.$arrow34icon.' FW3611 on FindU.com</a>
+          </li>';
+          echo '<li>
+            <a href="https://www.wrh.noaa.gov/mesowest/getobext.php?wfo=lox&sid=F3611" title="F3611 on NOAA Meso West" target="_blank"><img class="menuimg" src="https://madis.ncep.noaa.gov/images/header-noaa.png" style="max-width:30px" /> F3611 on NOAA</a>
+          </li>';
+          echo '<li>
+            <a href="https://madis-data.ncep.noaa.gov/MadisSurface/?CenterLAT=31.79&CenterLON=-82.39&Zoom=11.00&StationID=F3611" title="F3611 on MADIS Map" target="_blank"><img class="menuimg" src="https://madis.ncep.noaa.gov/images/header-noaa.png" style="max-width:30px" /> F3611 on MADIS Map</a>
+          </li>';
+          echo '<li><a href="https://mesowest.utah.edu/cgi-bin/droman/meso_base.cgi?stn=F3611" title="F3611 on Meso West" target="_blank"><img class="menuimg" src="https://mesowest.utah.edu/images/mesowest_static/mesowest_white_red_30.jpg" style="max-width:75px" /> F3611 on Meso West</a></li>';
+          echo '<li>
+            <a href="https://weather.gladstonefamily.net/site/F3611" title="F3611 on CWOP" target="_blank">
+              '.$arrow34icon.' 3611 on CWOP</a>
+          </li>';
+          ?>
+          <li class="header">EXTRAS</li>
+          
+            <?php if($weatherflowoption=="yes"){ echo "<li><a href=https://staging.smartweather.weatherflow.com/map/".$lat."/".$lon."/".$weatherflowmapzoom." data-featherlight=iframe>". $locationinfo." Weatherflow Map </a></li>" ;}
 else echo "";?>
-<li><!---webcam---> <a href="cam.php" data-featherlight="iframe" title="WEATHERSTATION WEBCAM"> <?php echo $webcam34icon;?> Web Cam </a></li>  
-<li><!--info---> <a href="bio.php" data-featherlight="iframe" title="Contact WEATHERSTATION Info"> <?php echo $svgmailmenu;?> Contact Info</a></li> 
-<li><!--info---> <a href="stationinfo.php" data-featherlight="iframe" title="Hardware WEATHERSTATION Info"> <?php echo $info;?> Hardware Info</a></li>   
+            <li>
+              <!---webcam--->
+              <a href="cam.php" data-featherlight="iframe" title="WEATHERSTATION WEBCAM">
+                <?php echo $webcam34icon;?> Web Cam </a>
+            </li>
+            <li>
+              <!--info--->
+              <a href="bio.php" data-featherlight="iframe" title="Contact WEATHERSTATION Info">
+                <?php echo $svgmailmenu;?> Contact Info</a>
+            </li>
+            <li>
+              <!--info--->
+              <a href="stationinfo.php" data-featherlight="iframe" title="Hardware WEATHERSTATION Info">
+                <?php echo $info;?> Hardware Info</a>
+            </li>
 
-<!---languages---> 
-  <br>   <?php if($languages=="yes") echo '<li><a href="">
+            <!---languages--->
+            <br>
+            <?php if($languages=="yes") echo '<li><a href="">
    
    '.$arrow34icon,' '.$lang["language"], '</a></li>','
      <br>
@@ -59,8 +106,21 @@ else echo "";?>
   <a href="index.php?lang=pl"><img src="img/flags/pl.svg"  title="Polish" width="25px" height="25px"></a>&nbsp;
   <br>
      '?>
-     <?php //do not remove this and if so no support is given and your domain will be blacklisted it is not much to ask //?>
-     <li><a href="https://github.com/weather34/Meteobridge-Weather34-Template" title="https://github.com/weather34/Meteobridge-Weather34-Template/" target="_blank"><?php echo $github;?> Designed by weather34.com</a></li>
- </div>
+            <?php //do not remove this and if so no support is given and your domain will be blacklisted it is not much to ask //?>
+            <li>
+              <a href="https://weather34.com/homeweatherstation/" title="https://weather34.com/homeweatherstation/" target="_blank">
+                <?php echo $info;?> Designed by weather34.com</a>
+            </li>
+  </div>
 
-</div></div></div></div></div></div></div></div></div></div></header>  
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</header>

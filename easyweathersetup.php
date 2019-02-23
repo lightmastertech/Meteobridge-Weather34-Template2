@@ -99,7 +99,16 @@ $language    = "'.$_POST['language']. '";
 $password    = "'.$_POST['password']. '";
 $flag   = "'.$_POST["flag"]. '";
 
-$analytics = "'.$_POST["analytics"]. '";
+$analytics =    "'.$_POST["analytics"]. '";
+$wunderground = "'.$_POST["wunderground"]. '";
+$findu =        "'.$_POST["findu"]. '";
+$noaa =         "'.$_POST["noaa"]. '";
+$madis =        "'.$_POST["madis"]. '";
+$mesowest =     "'.$_POST["mesowest"]. '";
+$cwop =         "'.$_POST["cwop"]. '";
+
+$finduid =      "'.$_POST["finduid"]. '";
+$cwopid =       "'.$_POST["cwopid"]. '";
 ';
  
 $fp = FOPEN("settings1.php", "w") or die("Unable to open settings1.php file check file permissions !");
@@ -1662,6 +1671,8 @@ your nearly there :-) keep going<br><br>
         </span></span>
         <br>
         
+          
+          
         <div class= "stationvalue">Display Languages in Menu</div> <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
     <path d="M12 30 L24 16 12 2" />
 </svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
@@ -1684,7 +1695,112 @@ your nearly there :-) keep going<br><br>
      <path d="M16 14 L16 23 M16 8 L16 10" /><circle cx="16" cy="16" r="14" /></svg> Yes</strong> use if you do <span style="color:rgba(24, 25, 27, 0.8)"> WANT</span> <span style="color:#777;"> languages selection<br>
         </span></span>
      
+          
+          
+          <div class="seperator"></div>
      
+     
+       
+     <span style="color:#F75C46;"><svg id="i-menu" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+</svg> Link options</span><br>
+     <div class= "stationvalue">Show Wunderground</div> <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M30 12 L16 24 2 12" />
+</svg>
+   
+   
+   <label name="wunderground"></label>
+        <select id="wunderground" name="wunderground" class="choose1" >
+            <option><?php echo $wunderground ;?></option>
+            <option>yes</option>
+            <option>no</option>
+            </select>
+            <br><br>
+     <div class= "stationvalue">Show CWOP</div>&nbsp;&nbsp;&nbsp;&nbsp; <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M30 12 L16 24 2 12" />
+</svg>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+   <label name="cwop"></label>
+        <select id="cwop" name="cwop" class="choose1" >
+            <option><?php echo $cwop ;?></option>
+            <option>yes</option>
+            <option>no</option>
+            </select>&nbsp;&nbsp;&nbsp;
+   <div class= "stationvalue">CWOP Station ID</div> 
+    <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="#F05E40" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg>
+
+    <input name="cwopid" type="text" id="cwopid" value="<?php echo $cwopid ;?>" class="choose"> 
+            <br><br>
+     <div class= "stationvalue">Show FindU</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M30 12 L16 24 2 12" />
+</svg>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+   <label name="findu"></label>
+        <select id="findu" name="findu" class="choose1" >
+            <option><?php echo $findu ;?></option>
+            <option>yes</option>
+            <option>no</option>
+            </select>&nbsp;&nbsp;&nbsp;
+    <div class= "stationvalue">FindU Station ID</div> 
+    <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="#F05E40" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg>
+
+    <input name="finduid" type="text" id="finduid" value="<?php echo $finduid ;?>" class="choose"> 
+    
+            <br><br>
+     <div class= "stationvalue">Show NOAA</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M30 12 L16 24 2 12" />
+</svg>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+   <label name="noaa"></label>
+        <select id="noaa" name="noaa" class="choose1" >
+            <option><?php echo $noaa ;?></option>
+            <option>yes</option>
+            <option>no</option>
+            </select>
+            <br><br>
+     <div class= "stationvalue">Show MADIS</div>&nbsp;&nbsp;&nbsp;&nbsp; <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M30 12 L16 24 2 12" />
+</svg>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+   <label name="madis"></label>
+        <select id="madis" name="madis" class="choose1" >
+            <option><?php echo $madis ;?></option>
+            <option>yes</option>
+            <option>no</option>
+            </select>
+            <br><br>
+     <div class= "stationvalue">Show MESO WEST</div> <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M30 12 L16 24 2 12" />
+</svg>
+   &nbsp;
+   
+   <label name="mesowest"></label>
+        <select id="mesowest" name="mesowest" class="choose1" >
+            <option><?php echo $mesowest ;?></option>
+            <option>yes</option>
+            <option>no</option>
+            </select>
+            <br>
    
     
      <div class="seperator"></div>

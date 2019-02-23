@@ -36,8 +36,8 @@ $livedata   = "mbridge/MBrealtimeupload.txt";
 $currentconditions   = "currentconditionsmetar34davis.php";
 
 $chartsource   = "mbcharts";
-$extralinks   = "no";
-$languages   = "no";
+$extralinks   = "yes";
+$languages   = "yes";
 
 $dateFormat   = "d-m-Y";
 $timeFormat    = "g:i:s a";
@@ -76,7 +76,7 @@ $db_user    = "xxxxxx";
 $db_pass  = "xxxxx";
 $db_name   = "xxxxxx";
 
-$notifications = "no";
+$notifications = "yes";
 $sunoption = "sun3.php";
 $hemisphere   = "0";
 $metar   = "yes";
@@ -88,4 +88,14 @@ $defaultlanguage   = "en";
 $language    = "en";
 $password    = "";
 $flag   = "en";
-$analytics = 'UA-123456789-0';
+
+$analytics =    "UA-123456789-0";
+$wunderground = "yes";
+$findu =        "yes";
+$noaa =         "yes";
+$madis =        "yes";
+$mesowest =     "yes";
+$cwop =         "yes";
+
+$finduid =      "FW3611";
+$cwopid =       "F3611";
