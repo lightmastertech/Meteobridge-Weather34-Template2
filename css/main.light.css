@@ -1626,7 +1626,6 @@ a:hover {
   -ms-clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0)
 }
 
-,
 .daylightcompass2>.daylightcompass-line2,
 .homeweathercompass1>.homeweathercompass-line1,
 .homeweathercompass2>.homeweathercompass-line2 {
@@ -3414,7 +3413,6 @@ tsteady {
   height: 118px
 }
 
-,
 .daylightbox {
   border: 0
 }
@@ -4189,7 +4187,6 @@ indooryellow {
   font-family: weathertext2
 }
 
-,
 .lightningstrikes1,
 .small,
 .smallhr,
@@ -5180,7 +5177,8 @@ smallsup {
 .simsekcontainer,
 .tempcontainer,
 .uvcontainer1 {
-  -o-font-smoothing: antialiasedleft:0;
+  -o-font-smoothing: antialiased;
+  left:0;
   bottom: 0;
   right: 0;
   float: left
@@ -5680,7 +5678,7 @@ img.menuimg {
 .elevationword {
   font-size: .6rem;
   position: absolute;
-  color: #2d3a4b)
+  color: #2d3a4b
 }
 
 .sundialcontainerdiv2 {
@@ -6172,7 +6170,7 @@ indoorred1 {
   width: 4rem;
   border: 1px solid #e6e8ef;
   border-radius: 4px;
-  color: #2d3a4b);
+  color: #2d3a4b;
   background: 0
 }
 
@@ -7376,7 +7374,8 @@ wfstriketoday {
   margin-top: 0;
   margin-left: 120px;
   font-size: .55rem;
-  width: 100pxlfont-family:weathertext2
+  width: 100px;
+  font-family:weathertext2
 }
 
 .meteorshower,

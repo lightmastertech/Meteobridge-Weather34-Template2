@@ -3096,7 +3096,6 @@ convtext {
   border-radius: 50%
 }
 
-,
 .thearrow4:after,
 .thearrow7:after {
   left: 50%;
@@ -6490,11 +6489,12 @@ smallrainunita {
   justify-content: center;
   height: 1rem;
   width: 3.55rem;
-  border: 1px solid #38383c;
+  border: 1px;
+  solid: #38383c;
   border-radius: 2px;
   line-height: 16px;
   font-size: .85em;
-  color: ##3b9cac;
+  color: #3b9cac;
   background: 0
 }
 
@@ -7286,7 +7286,8 @@ wfstriketoday {
   margin-top: 0;
   margin-left: 120px;
   font-size: .55rem;
-  width: 100pxlfont-family:weathertext2
+  width: 100px;
+  font-family:weathertext2
 }
 
 .meteorshower,
