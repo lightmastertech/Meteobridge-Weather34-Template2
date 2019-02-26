@@ -4828,9 +4828,9 @@ grey {
 
 .daylightvalue1 {
   position: absolute;
-  margin-left: 68px;
+  margin-left: 69px;
   top: 45px;
-  font-size: 1.4rem
+  font-size: 1.25rem
 }
 
 .daylightvalue1 hours {
@@ -5395,7 +5395,7 @@ topyellow1 {
 
 smalluvunit {
   font-size: .55rem;
-  font-family: Arial, Helvetica, system;
+  font-family: weathertext2;
   font-weight: 400
 }
 
@@ -6225,7 +6225,7 @@ weather34windrunspan {
 .darkskyforecasthome,
 .darkskyforecastinghome {
   font-family: weathertext2;
-  color: #2d3a4b
+  color: #07727d
 }
 
 .darkskyforecasthome {
@@ -6275,7 +6275,7 @@ weather34windrunspan {
 .darkskyweekdayhome {
   position: absolutue;
   text-align: center;
-  padding: 3px;
+  padding: 1px;
   color: #2d3a4b;
   margin: 0;
   background: 0
@@ -6297,9 +6297,14 @@ weather34windrunspan {
   color: #d05f2d
 }
 
+.darkskyforecasthome darkskytemphihome {
+  font-size: 12px;
+  color: #ff7c39
+}
+
 .darkskyforecasthome darkskytempwindhome,
 .darkskyforecasthome darkskytempwindhome span4 {
-  color: #2d3a4b;
+  color: #07727d;
   font-family: weathertext2;
   font-size: .65rem
 }
@@ -6328,6 +6333,14 @@ darkskytemplohome {
 
 darkskytemplohome uvspan {
   font-weight: 400
+}
+
+darkskytemplohome thunder {
+  position: relative;
+  font-size: .55rem;
+  font-weight: 500;
+  top: -5px;
+  color: #2d3a4b
 }
 
 gustorange {

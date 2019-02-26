@@ -1852,6 +1852,7 @@ suptemp3 {
   }
   .a,
   .chart,
+  .w34uptime,
   .weather2-container,
   .weatherfooter-container,
   header {
@@ -3362,9 +3363,9 @@ convtext {
 }
 
 .daylightvalue1 {
-  left: 20px;
+  left: 21px;
   margin-top: 10px;
-  font-size: 1.4rem
+  font-size: 1.25rem
 }
 
 .daylightvalue1 minutes {
@@ -3878,47 +3879,53 @@ suplight {
   font-size: .7em
 }
 
+.darkskydiv,
 .darkskyforecasthome,
-.darkskyforecasthome darkskytemphihome,
-.darkskyforecasthome darkskytemplohome,
-.darkskyforecasthome darkskytemplohome span,
-.darkskyforecasthome darkskytempwindhome span,
-.darkskyforecasthome darkskytempwindhome span2,
-.darkskyweekdayhome {
-  font-size: .65rem;
-  font-family: weathertext2
+.darkskyforecastinghome {
+  font-family: weathertext2;
+  color: #07727d
 }
 
 .darkskyforecasthome {
   position: absolute;
-  width: 300px;
-  margin: 0 auto 0 5px;
+  width: 305px;
+  background: 0;
+  margin: 2px auto 0 5px;
+  font-size: .65rem;
   display: block;
-  border-radius: 2px;
+  border-radius: 3px;
   overflow: hidden
 }
 
 .darkskydiv,
 .darkskyforecastinghome {
+  overflow: hidden
+}
+
+.darkskyforecasthome darkskytemphihome,
+.darkskyforecasthome darkskytempwindhome span,
+.darkskyforecasthome darkskytempwindhome span2,
+.darkskyweekdayhome {
   font-family: weathertext2;
-  overflow: hidden!important
+  font-size: .93em;
+  color: #c0c0c0
 }
 
 .darkskydiv {
-  width: 300px;
+  width: 305px;
   height: 180px;
-  margin-top: 10px
+  margin-top: 5px
 }
 
 .darkskyforecastinghome {
   float: left;
   display: inline;
-  width: 28%;
-  border-radius: 2px;
-  margin: 0 0 100px 4%;
-  height: 140px;
-  padding: 0;
-  background-color: 0;
+  width: 29%;
+  border-radius: 3px;
+  margin: 0 0 100px 3.25%;
+  height: 137px;
+  padding: 1px;
+  background: 0;
   border: 1px solid rgba(153, 155, 156, .1);
   color: #c0c0c0
 }
@@ -3926,37 +3933,64 @@ suplight {
 .darkskyweekdayhome {
   position: absolutue;
   text-align: center;
-  padding: 2px;
+  padding: 1px;
   color: #c0c0c0;
   margin: 0;
-  margin-bottom: 3px;
   background: 0
 }
 
+.darkskyforecasthome darkskytemphihome,
+.darkskyforecasthome darkskytemplohome {
+  margin-top: 0;
+  margin-left: 1%;
+  font-weight: 500
+}
+
 .darkskyforecasthome darkskytemphihome {
-  margin-top: 0px;
-  color: #ff7c39;
-  margin-left: 1%
+  color: #d05f2d
 }
 
 .darkskyforecasthome darkskytemphihome span {
-  font-size: 11px;
+  font-size: .7rem;
   color: #ff7c39
 }
 
-.darkskyforecasthome darkskytemplohome {
-  font-size: 11px
+.darkskyforecasthome darkskytemphihome {
+  font-size: 12px;
+  color: #ff7c39
 }
 
 .darkskyforecasthome darkskytempwindhome,
 .darkskyforecasthome darkskytempwindhome span4 {
-  color: #c0c0c0;
+  color: #07727d;
   font-family: weathertext2;
   font-size: .65rem
 }
 
-.darkskyforecasthome darkskytempwindhome span2 {
-  color: #c0c0c0
+darkskytemplohome uvspan,
+gustorange {
+  color: #d05f2d;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.darkskyforecasthome darkskytemplohome span {
+  font-size: .7rem
+}
+
+darkskytemplohome uv {
+  font-size: .6rem;
+  font-weight: 500
+}
+
+darkskyforecasthome darkskytemplohome,
+darkskytemplohome {
+  font-size: .7rem;
+  font-weight: 500
+}
+
+darkskytemplohome uvspan {
+  font-weight: 400
 }
 
 .darkskyiconcurrent span1,
@@ -3972,9 +4006,17 @@ suplight {
   font-size: 12px
 }
 
+darkskytemplohome thunder {
+  position: relative;
+  font-size: .55rem;
+  font-weight: 500;
+  top: -5px;
+  color: #c0c0c0
+}
+
 .darkskyiconcurrent {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: -5px;
   margin-left: 35px;
   float: left
