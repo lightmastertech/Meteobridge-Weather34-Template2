@@ -7980,3 +7980,49 @@ valuewindunit {
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px
 }
+
+greyu {
+  font-size: .55rem;
+  font-family: weathertext2;
+  color: #c0c0c0
+}
+
+orangeu {
+  color: #d05f2d
+}
+
+greenu {
+  color: #90b12a
+}
+
+yellowu {
+  color: #e6a141;
+}
+
+redu {
+  color: #cd5245
+}
+
+purpleu {
+  color: #b600b0
+}
+
+.uvsolarwordbig {
+  position: absolute;
+  margin-left: 110px;
+  margin-top: 35px;
+  font-size: 1.4rem;
+  color: rgba(86, 95, 103, .2);
+  width: 200px;
+  font-family: weathertext2
+}
+
+.airqualitywordbig {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 15px;
+  font-size: 1.4rem;
+  color: rgba(86, 95, 103, .2);
+  width: 200px;
+  font-family: weathertext2
+}
