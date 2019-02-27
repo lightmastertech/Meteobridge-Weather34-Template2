@@ -19,6 +19,7 @@ mbcharts/*/*.csv
 jsondata/*.txt
 chartswudata/*
 demodata/*
+mbridge/MBrealtimeupload.txt
 
 #Ignore all backup files
 *.bak
