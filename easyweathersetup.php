@@ -113,6 +113,10 @@ $cwop =         "'.$_POST["cwop"]. '";
 
 $finduid =      "'.$_POST["finduid"]. '";
 $cwopid =       "'.$_POST["cwopid"]. '";
+
+$pbactive =     "'.$_POST["pbactive"]. '";
+$pbtoken =      "'.$_POST["pbtoken"]. '";
+$pbchannel =    "'.$_POST["pbchannel"]. '";
 ';
  
 $fp = FOPEN("settings1.php", "w") or die("Unable to open settings1.php file check file permissions !");
@@ -1846,7 +1850,25 @@ your nearly there :-) keep going<br><br>
             <option>yes</option>
             <option>no</option>
             </select>
+            <br><br>
+     <div class= "stationvalue">Show Pushbullet</div> &nbsp;&nbsp;<svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg><svg id="i-chevron-bottom" viewBox="0 0 32 32" width="10" height="10" fill="#777" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M30 12 L16 24 2 12" />
+</svg>
+   &nbsp;&nbsp;&nbsp;
+   
+   <label name="pbactive"></label>
+        <select id="pbactive" name="pbactive" class="choose1" >
+            <option><?php echo $pbactive ;?></option>
+            <option>yes</option>
+            <option>no</option>
+            </select>
             <br>
+       <svg id="i-alert" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M16 3 L30 29 2 29 Z M16 11 L16 19 M16 23 L16 25" />
+</svg> <span style="color:#777;">See the further down to configure Pushbullet</span>
+     <br/>
    
     
      <div class="seperator"></div>
@@ -2089,41 +2111,8 @@ Weatherflow Map Zoom</div>
     
     
         <br>
-    
-    
-    <p>
-      <br>
-           
-  <div class="seperator"></div>
-     
-     
-     
-     <span style="color:#F75C46;"><svg id="i-activity" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M4 16 L11 16 14 29 18 3 21 16 28 16" />
-</svg> Google Analytics</span><br>
- 
-  <div class= "stationvalue">Google Analytics Code: </div> 
-    <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-    <path d="M12 30 L24 16 12 2" />
-</svg>
-
-    <input name="analytics" type="text" id="analytics" value="<?php echo $analytics ;?>" class="choose"> 
-    
-    
-    
-    
-    
-    <br> <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-    <path d="M16 14 L16 23 M16 8 L16 10" />
-    <circle cx="16" cy="16" r="14" />
-</svg> <span style="color:#777;">enter your <strong>Analytics Code</strong>.  Example: <strong><span style="color:rgba(86, 95, 103, 1.000);">UA-123456789-0</strong></span></span>
      <br>
     
-    
-    
-    
-    
-     
     <p><br>
     <div class="seperator"></div>
       
@@ -2176,10 +2165,103 @@ Check<b>WX</b> Metar API KEY you need to sign up here for free API key <a href="
 </svg>
 
     <input name="airport1dist" type="text" id="airport1dist" value="<?php echo $airport1dist ;?>" class="choose"> 
-    <br> <span style="color:#777;">enter your nearby METAR stations distance for example <span style="color:#F75C46;">26</span> or <span style="color:#F75C46;">5</span> do not enter any letters km or m 
+  <br> <span style="color:#777;">enter your nearby METAR stations distance for example <span style="color:#F75C46;">26</span> or <span style="color:#F75C46;">5</span> do not enter any letters km or m </span>
         
+  </div>
+    <br>
+  
+  <div class="weatheroptionssidebar">
+    <svg id="i-alert" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M16 3 L30 29 2 29 Z M16 11 L16 19 M16 23 L16 25" />
+</svg>
+
+Leave as the default generic code or leave it blank if you don't want to use Google Analytics
+   <div class="weatherbottominfo">
+
+</div>
+   
+   </div>
+  
+  <div class="weatheroptions">
+   <div class= "weathersectiontitle"> 
+   <svg id="i-settings" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z" />
+    <circle cx="16" cy="16" r="4" />
+</svg>
+   Google Analytics
+    </div>
+ <br/>
+ 
+  <div class= "stationvalue">Google Analytics Code: </div> 
+    <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg>
+
+    <input name="analytics" type="text" id="analytics" value="<?php echo $analytics ;?>" class="choose" /> 
+
+    <br/> <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M16 14 L16 23 M16 8 L16 10" />
+    <circle cx="16" cy="16" r="14" />
+    </svg> <span style="color:#777;">enter your <strong>Analytics Code</strong>.  Example: <strong><span style="color:rgba(86, 95, 103, 1.000);">UA-123456789-0</span></strong></span>
+  </div>
+  
+  
+  
+  
+  <div class="weatheroptionssidebar"><svg id="i-info" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M16 14 L16 23 M16 8 L16 10" /><circle cx="16" cy="16" r="14" /></svg>
+    <a href="https://www.pushbullet.com/" title="https://www.pushbullet.com/" target="_blank">1. Sign up for <strong><span style="color:#F8712E;">Pushbullet</span></strong></a>
+   <br/>
+    <a href="https://www.pushbullet.com/my-channel" title="https://www.pushbullet.com/my-channel" target="_blank"> 2. Create your <strong><span style="color:#F8712E;">PB Channel</span></strong></a>
+   <br/>
+    <a href="https://www.pushbullet.com/#settings" title="https://www.pushbullet.com/#settings" target="_blank"> 3. Create your <strong><span style="color:#F8712E;">Access Token</span></strong></a>
+   <br/>
+   <div class="weatherbottominfo">
+
+</div>
+   
+   </div>
+  
+  
+  <div class="weatheroptions">
+   <div class= "weathersectiontitle"> 
+   <svg id="i-settings" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z" />
+    <circle cx="16" cy="16" r="4" />
+</svg>
+   Pushbullet Services
+    </div>
+ <br/>
     
-    <p> 
+  <div class= "stationvalue">Pushbullet Token: </div> 
+    <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg>
+
+    <input name="pbtoken" type="text" id="pbtoken" value="<?php echo $pbtoken ;?>" class="chooseapi" /> 
+
+    <br/> <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M16 14 L16 23 M16 8 L16 10" />
+    <circle cx="16" cy="16" r="14" />
+</svg> <span style="color:#777;">enter your <strong>PB Access Token</strong> from step 3.  Example: <strong><span style="color:rgba(86, 95, 103, 1.000);">o.01234567890123456789012345678901</span></strong></span>
+     <br/>
+  <div class= "stationvalue">Pushbullet Channel Tag: </div> 
+    <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg>
+
+    <input name="pbchannel" type="text" id="pbchannel" value="<?php echo $pbchannel ;?>" class="choose" /> 
+
+    <br/> <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M16 14 L16 23 M16 8 L16 10" />
+    <circle cx="16" cy="16" r="14" />
+</svg> <span style="color:#777;">enter your <strong>PB Channel Tag</strong> from step 2.  Example: <strong><span style="color:rgba(86, 95, 103, 1.000);">F3611</span></strong></span>
+    <br/> <svg id="i-info" viewBox="0 0 32 32" width="12" height="12" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M16 14 L16 23 M16 8 L16 10" />
+    <circle cx="16" cy="16" r="14" />
+    </svg> <span style="color:#777;">Your <strong>PB Share link</strong> looks like this: <a href="https://www.pushbullet.com/channel?tag=<?php echo $pbchannel ;?>" title="https://www.pushbullet.com/channel?tag=<?php echo $pbchannel ;?>" target="_blank"><strong><span style="color:rgba(86, 95, 103, 1.000);">https://www.pushbullet.com/channel?tag=<?php echo $pbchannel ;?></span></strong></a></span>
+     <br/>
+  
        </div>
   
    

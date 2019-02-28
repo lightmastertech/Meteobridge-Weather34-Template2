@@ -101,5 +101,9 @@ $madis =        "yes";
 $mesowest =     "yes";
 $cwop =         "yes";
 
-$finduid =      "FW3611";
-$cwopid =       "F3611";
+$finduid =      "FW0000";
+$cwopid =       "F0000";
+
+$pbactive =     "yes";
+$pbtoken =      "o.01234567890123456789012345678901";
+$pbchannel =    "pbchannel";

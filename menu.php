@@ -49,6 +49,8 @@ else echo' <a class="menucolor" href="./?units=metric">Units</a>';?></div>
           if($madis=='yes') {echo '<li><a href="https://madis-data.ncep.noaa.gov/MadisSurface/?CenterLAT='.$lat.'&CenterLON='.$lon.'&Zoom=11.00&StationID='.$cwopid.'" title="'.$cwopid.' on MADIS Map" target="_blank"><img class="menuimg" src="https://madis.ncep.noaa.gov/images/header-noaa.png" style="max-width:30px" /> '.$cwopid.' on MADIS Map</a></li>';}
           if($mesowest=='yes') {echo '<li><a href="https://mesowest.utah.edu/cgi-bin/droman/meso_base.cgi?stn='.$cwopid.'" title="'.$cwopid.' on Meso West" target="_blank"><img class="menuimg" src="https://mesowest.utah.edu/images/mesowest_static/mesowest_white_red_30.jpg" style="max-width:75px" /> '.$cwopid.' on Meso West</a></li>';}
           if($cwop=='yes') {echo '<li><a href="https://weather.gladstonefamily.net/site/'.$cwopid.'" title="'.$cwopid.' on CWOP" target="_blank">'.$arrow34icon.' '.$cwopid.' on CWOP</a></li>';}
+          if($pbactive=='yes') {echo '<li><a class="pushbullet-subscribe-widget" data-channel="'.$pbchannel.'" data-widget="button" data-size="small"></a>
+<script type="text/javascript">(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src="https://widget.pushbullet.com/embed.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);})();</script></li>';}
       }?>
           <li class="header">EXTRAS</li>
           
