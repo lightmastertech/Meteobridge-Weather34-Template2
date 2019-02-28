@@ -24,7 +24,7 @@ http://creativecommons.org/licenses/by-nc-nd/4.0/
  
  Paul @komoka weather in Canada for continous support and testing 
  
- Joseph for Spanish/Catalan language translation and for many ideas and refinements
+ Josep for Spanish/Catalan language translation and for many ideas and refinements
  
  Pascal Catte French translation and ideas fowarded 
  
@@ -40,7 +40,7 @@ http://creativecommons.org/licenses/by-nc-nd/4.0/
  
  Boris at smartbedded (meteobridge) for ongoing support and upkeep of meteobridge 
  
- Wim van der Kuil for the original meteobridge script
+ Wim van der Kuil for the original meteobridge script (now offers Weather Display and other versions of template)
  
  David St John at weatherflow for providing hardware for testing and his non bias logical views 
  
