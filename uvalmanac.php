@@ -95,7 +95,7 @@ smalluvunit{font-size:.9rem;font-family:Arial,Helvetica,system;}
  <br>
 <div class="hitempy">  
   <?php if ($weather["uvdmax"] < $weather["uvydmax"]){echo "Max <orange>UVI</sup></orange> Today was <green>Less</green> than Yesterday"; echo " ",$weather["uvydmax"] - $weather["uvdmax"], " <orange>UVI</sup></orange><blue>".$fallingsymbol."</blue>";}  
-  else if ($weather["uvdmax"] > $weather["uvydmax"]){echo "Max <orange>UVI</orange></sup> Today was <orange>Higher</orange> than Yesterday";echo " ",$weather["uvdmax"] - $weather["uvydmax"], " <orange>UVI</sup> ".$risingsymbol."</orange>";}
+  else if ($weather["uvdmax"] > $weather["uvydmax"]){echo "Max <orange>UVI</orange></sup> Today was <orange>Higher</orange> than Yesterday by";echo " <orange>",$weather["uvdmax"] - $weather["uvydmax"], " UVI</sup> ".$risingsymbol."</orange>";}
   ?></span>
             </div> 
 
