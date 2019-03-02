@@ -3922,7 +3922,7 @@ suplight {
   width: 29%;
   border-radius: 3px;
   margin: 0 0 100px 3.25%;
-  height: 137px;
+  height: 141px;
   padding: 1px;
   background: 0;
   border: 1px solid rgba(153, 155, 156, .1);
@@ -7985,6 +7985,11 @@ greyu {
   font-size: .55rem;
   font-family: weathertext2;
   color: #c0c0c0
+}
+
+valuetitleunit {
+  font-size: .8em;
+  font-family: weathertext2
 }
 
 orangeu {

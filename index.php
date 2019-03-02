@@ -48,10 +48,11 @@ if(!file_exists($settings1file) || $settings1filesize < 100) {
 # HOME WEATHER STATION TEMPLATE by BRIAN UNDERDOWN 2015-2016-2017-2018                             #
 # CREATED FOR HOMEWEATHERSTATION TEMPLATE at                									   #
 #   https://weather34.com/homeweatherstation/index.html                                            #
-#  WEATHER STATION TEMPLATE 2015-2016-2017-2018 Meteobridge.           							   #
-#  Meteobridge Davis Version  														               #
+#  WEATHER STATION TEMPLATE 2015-2016-2017-2018-2019 Meteobridge.     							   #
+#  Meteobridge Version  															               #
 #   https://www.weather34.com                                                                      #
 ####################################################################################################
+//original weather34 script original css/svg/php by weather34 2015-2019 clearly marked as original by weather34//
 include_once('livedata.php');include_once('common.php');include_once('settings1.php'); date_default_timezone_set($TZ);?>
 <!DOCTYPE html>
 <html>
@@ -100,6 +101,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <meta name="theme-color" content="#ffffff">
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 <link href="favicon.ico" rel="icon" type="image/x-icon">
+<link rel="preload" href="css/fonts/verbatim-regular.woff" as="font" type="font/woff" crossorigin>
 <link href="css/main.<?php echo $theme;?>.css?version=<?php echo filemtime('css/main.'.$theme.'.css');?>" rel="stylesheet prefetch">
 </head>
 <body>
@@ -123,7 +125,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <span class="monthpopup"> <a alt="monthly temperature" title="monthly temperature" href="<?php echo $chartsource ;?>/monthlytemperature.php" data-featherlight="iframe" > <?php echo $menucharticonpage?> <?php echo strftime(" %b") ;?> </a></span>
 <span class="todaypopup"> <a alt="today temperature" title="today temperature" href="<?php echo $chartsource ;?>/todaytemperature.php" data-featherlight="iframe" >  <?php echo $menucharticonpage?> <?php echo $lang['Today']; ?> </a></span>
       </div>
-<span class='moduletitle'> <?php echo $lang['Temperature']; ?> <?php echo "&deg;" . $weather["temp_units"] . " \n";?></span><br /></span>
+<span class='moduletitle'> <?php echo $lang['Temperature']; ?> (<valuetitleunit>&deg;<?php echo $weather["temp_units"] ;?></valuetitleunit>) </span><br /></span>
   <div id="temperature"></div><br></div>
   <!--forecast for homeweatherstation template-->
 <div class="weather-item"><div class="chartforecast">
@@ -133,7 +135,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <?php if ($position6=='forecast3ds.php') {echo ' <span class="yearpopup"><a alt="Hourly Forecast" title="Hourly Forecast" href="forecastdshour.php" data-featherlight="iframe">&nbsp;'. $chartinfo. " Hourly Forecast</a></span>";}?></span>
       </div>
   <span class='moduletitle'>
-    <?php echo $lang['Forecast'];?>  </span><br />
+    <?php echo $position6title ;?>  (<valuetitleunit>&deg;<?php echo $weather["temp_units"] ;?></valuetitleunit>)  </span><br />
   <div id="currentfore"></div></div>
   <!--currentsky for homeweatherstation template-->
   <div class="weather-item"><div class="chartforecast">
@@ -150,7 +152,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <span class="monthpopup"> <a alt="monthly windspeed" title="monthly windspeed"href="<?php echo $chartsource ;?>/monthlywindspeedgust.php" data-featherlight="iframe"><?php echo $menucharticonpage?> <?php echo strftime(" %b") ;?> </a></span>
 <span class="todaypopup"> <a alt="today windspeed" title="today windspeed" href="<?php echo $chartsource ;?>/todaywindspeedgust.php" data-featherlight="iframe" ><?php echo $menucharticonpage?> <?php echo $lang['Today']; ?> </a></span>
       </div>
-  <span class='moduletitle'><?php echo $lang['Direction'];?> | <?php echo $lang['Windspeed'] ," (",$weather["wind_units"];?>)</span><br />
+  <span class='moduletitle'><?php echo $lang['Direction'];?> | <?php echo $lang['Windspeed'] ," (<valuetitleunit>",$weather["wind_units"];?></valuetitleunit>)</span><br />
          <div id="windspeed"></div></div>
        <!--barometer for homeweatherstation template-->
   <div class="weather-item"><div class="chartforecast" >
@@ -159,7 +161,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <span class="monthpopup"> <a alt="monthly barometer" title="monthly barometer" href="<?php echo $chartsource ;?>/monthlybarometer.php" data-featherlight="iframe" ><?php echo $menucharticonpage?> <?php echo strftime(" %b") ;?> </a></span>
 <span class="todaypopup"> <a alt="today barometer" title="today barometer" href="<?php echo $chartsource ;?>/todaybarometer.php" data-featherlight="iframe" ><?php echo $menucharticonpage?> <?php echo $lang['Today']; ?></a></span>
       </div>
-  <span class='moduletitle'><?php echo $lang['Barometer']," (",$weather["barometer_units"]; ?>)</span><br />
+  <span class='moduletitle'><?php echo $lang['Barometer']," (<valuetitleunit>",$weather["barometer_units"]; ?></valuetitleunit>)</span><br />
          <div id="barometer"></div></div>
       <!--moonphase for homeweatherstation template includes reverse for southern hemisohere-->
 <div class=weather-item><div class=chartforecast>
@@ -179,7 +181,7 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
 <span class="monthpopup"> <a alt="monthly rainfall" title="monthly rainfall" href="<?php echo $chartsource ;?>/monthlyrainfall.php" data-featherlight="iframe" ><?php echo $menucharticonpage?> <?php echo strftime(" %b") ;?> </a></span>
 <span class="todaypopup"> <a alt="today rainfall" title="today rainfall" href="<?php echo $chartsource ;?>/todayrainfall.php" data-featherlight="iframe" ><?php echo $menucharticonpage?> <?php echo $lang['Today']; ?> </a></span>
       </div>
-  <span class='moduletitle'><?php echo $lang['Rainfalltoday']," (".$weather["rain_units"]?>)</span><br />
+  <span class='moduletitle'><?php echo $lang['Rainfalltoday']," (<valuetitleunit>".$weather["rain_units"]?></valuetitleunit>)</span><br />
          <div id="rainfall"></div></div>        
          
   <!--position 12th module (second to last) for homeweatherstation template-->

@@ -6228,12 +6228,12 @@ weather34windrunspan {
 
 .darkskyforecasthome {
   position: absolute;
-  width: 300px;
+  width: 305px;
   background: 0;
   margin: 2px auto 0 5px;
   font-size: .65rem;
   display: block;
-  border-radius: 4px;
+  border-radius: 3px;
   overflow: hidden
 }
 
@@ -6247,24 +6247,24 @@ weather34windrunspan {
 .darkskyforecasthome darkskytempwindhome span2,
 .darkskyweekdayhome {
   font-family: weathertext2;
-  font-size: .65rem;
+  font-size: .93em;
   color: #2d3a4b
 }
 
 .darkskydiv {
-  width: 300px;
+  width: 305px;
   height: 180px;
-  margin-top: 10px
+  margin-top: 5px
 }
 
 .darkskyforecastinghome {
   float: left;
   display: inline;
-  width: 28%;
-  border-radius: 4px;
-  margin: 0 0 100px 4%;
-  height: 137px;
-  padding: 0;
+  width: 29%;
+  border-radius: 3px;
+  margin: 0 0 100px 3.25%;
+  height: 141px;
+  padding: 1px;
   background: 0;
   border: 1px solid rgba(153, 155, 156, .1);
   color: #2d3a4b
@@ -6292,7 +6292,7 @@ weather34windrunspan {
 
 .darkskyforecasthome darkskytemphihome span {
   font-size: .7rem;
-  color: #d05f2d
+  color: #ff7c39
 }
 
 .darkskyforecasthome darkskytemphihome {
@@ -6333,12 +6333,37 @@ darkskytemplohome uvspan {
   font-weight: 400
 }
 
+.darkskyiconcurrent span1,
+.darkskynexthours,
+.darkskynexthours span1,
+.darkskynexthours span2 {
+  font-family: arial, helvetica, system;
+  color: #2d3a4b
+}
+
+.darkskynexthours span1,
+.darkskynexthours span2 {
+  font-size: 12px
+}
+
 darkskytemplohome thunder {
   position: relative;
   font-size: .55rem;
   font-weight: 500;
   top: -5px;
   color: #2d3a4b
+}
+
+.darkskyiconcurrent {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-left: 35px;
+  float: left
+}
+
+.darkskyiconcurrent span1 {
+  font-size: .9em
 }
 
 gustorange {
@@ -7979,7 +8004,7 @@ raiblue {
 
 .inheatcircle-content {
   position: absolute;
-  color: #c0c0c0;
+  color: #2d3a4b;
   float: left;
   margin-left: -4px;
   padding: 0;
@@ -8000,7 +8025,7 @@ raiblue {
 
 .inheatcircle2-content {
   position: absolute;
-  color: #c0c0c0;
+  color: #2d3a4b;
   float: left;
   margin-top: 35px;
   margin-left: -5px;
@@ -8034,7 +8059,7 @@ raiblue {
   line-height: 16px;
   font-family: weathertext2;
   font-size: .85em;
-  color: #c0c0c0
+  color: #2d3a4b
 }
 
 .intemphumcircle60-80 {
@@ -8091,6 +8116,11 @@ greyu {
   font-size: .55rem;
   font-family: weathertext2;
   color: #2d3a4b
+}
+
+valuetitleunit {
+  font-size: .8em;
+  font-family: weathertext2
 }
 
 orangeu {
