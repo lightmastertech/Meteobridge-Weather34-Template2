@@ -142,14 +142,22 @@ smalluvunit{font-size:.90rem;font-family:Arial,Helvetica,system;}
 <section class="weather34cards"><div class="weather34card weather34card--earthquake1">
 <div class="weather34card_weather34-container"> <div class="weather34card_weather34-wrapper"><span class="weather34card__count-text--big">
 
- <div class="metartempcontainer1"><?php 
-if ($metar34temperaturec >30) {echo '<div class=metartemptoday30>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34temperaturec >25) {echo '<div class=metartemptoday25>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34temperaturec >20) {echo '<div class=metartemptoday20>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34temperaturec >10) {echo '<div class=metartemptoday10>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34temperaturec >5) {echo '<div class=metartemptoday5>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34temperaturec >-50) {echo '<div class=metartemptoday0>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
-
+ <div class="metartempcontainer1"><?php
+ if ($tempunit == 'C') {
+	if ($metar34temperaturec >30) {echo '<div class=metartemptoday30>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >25) {echo '<div class=metartemptoday25>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >20) {echo '<div class=metartemptoday20>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >10) {echo '<div class=metartemptoday10>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >5) {echo '<div class=metartemptoday5>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >-50) {echo '<div class=metartemptoday0>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+ } else {
+	 if ($metar34temperaturef >86) {echo '<div class=metartemptoday30>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >77) {echo '<div class=metartemptoday25>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >68) {echo '<div class=metartemptoday20>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >50) {echo '<div class=metartemptoday10>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >41) {echo '<div class=metartemptoday5>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >-50) {echo '<div class=metartemptoday0>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+ }
 ?></smalluvunit></div></div>
 <div class="tword">Temperature</div>
 </div>
@@ -157,39 +165,63 @@ else if ($metar34temperaturec >-50) {echo '<div class=metartemptoday0>'.$metar34
 
 
 <div class="metartempcontainer4"><?php 
-
-if ($metar34temperaturef >86) {echo '<div class=metartemptoday30>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34temperaturef >77) {echo '<div class=metartemptoday25>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34temperaturef >68) {echo '<div class=metartemptoday20>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34temperaturef >50) {echo '<div class=metartemptoday10>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34temperaturef >41) {echo '<div class=metartemptoday5>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34temperaturef >-50) {echo '<div class=metartemptoday0>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+if ($tempunit == 'C') {
+	if ($metar34temperaturef >86) {echo '<div class=metartemptoday30>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >77) {echo '<div class=metartemptoday25>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >68) {echo '<div class=metartemptoday20>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >50) {echo '<div class=metartemptoday10>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >41) {echo '<div class=metartemptoday5>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34temperaturef >-50) {echo '<div class=metartemptoday0>'.$metar34temperaturef."<smalluvunit> &nbsp;&deg;F";}
+} else{
+	if ($metar34temperaturec >30) {echo '<div class=metartemptoday30>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >25) {echo '<div class=metartemptoday25>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >20) {echo '<div class=metartemptoday20>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >10) {echo '<div class=metartemptoday10>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >5) {echo '<div class=metartemptoday5>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34temperaturec >-50) {echo '<div class=metartemptoday0>'.$metar34temperaturec."<smalluvunit> &nbsp;&deg;C";}
+}
 ?></smalluvunit></div></div>
 <div class="tword2">Temperature</div>
 
 
 
 <div class="metartempcontainer5"><?php 
-if ($metar34dewpointf>86) {echo '<div class=metartemptoday30>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34dewpointf>77) {echo '<div class=metartemptoday25>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34dewpointf>68) {echo '<div class=metartemptoday20>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34dewpointf>50) {echo '<div class=metartemptoday10>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34dewpointf>41) {echo '<div class=metartemptoday5>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
-else if ($metar34dewpointf>-50) {echo '<div class=metartemptoday0>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+if ($tempunit == 'C') {
+	if ($metar34dewpointf>86) {echo '<div class=metartemptoday30>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>77) {echo '<div class=metartemptoday25>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>68) {echo '<div class=metartemptoday20>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>50) {echo '<div class=metartemptoday10>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>41) {echo '<div class=metartemptoday5>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>-50) {echo '<div class=metartemptoday0>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+}else {
+	if ($metar34dewpointc >30) {echo '<div class=metardewtoday30>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >25) {echo '<div class=metardewtoday25>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >20) {echo '<div class=metardewtoday20>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >10) {echo '<div class=metardewtoday10>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >5) {echo '<div class=metardewtoday5>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >-50) {echo '<div class=metardewtoday0>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+}
 ?></smalluvunit></div></div>
 <div class="dewword2">&nbsp;Dewpoint</div>
 	 
- <div class="lotemp">
- 
- <div class="metardewcontainer1"><?php 
- 
- if ($metar34dewpointc >30) {echo '<div class=metardewtoday30>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34dewpointc >25) {echo '<div class=metardewtoday25>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34dewpointc >20) {echo '<div class=metardewtoday20>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34dewpointc >10) {echo '<div class=metardewtoday10>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34dewpointc >5) {echo '<div class=metardewtoday5>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
-else if ($metar34dewpointc >-50) {echo '<div class=metardewtoday0>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+<div class="lotemp">
 
+<div class="metardewcontainer1"><?php
+if ($tempunit == 'C') {
+	if ($metar34dewpointc >30) {echo '<div class=metardewtoday30>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >25) {echo '<div class=metardewtoday25>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >20) {echo '<div class=metardewtoday20>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >10) {echo '<div class=metardewtoday10>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >5) {echo '<div class=metardewtoday5>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+	else if ($metar34dewpointc >-50) {echo '<div class=metardewtoday0>'.$metar34dewpointc."<smalluvunit> &nbsp;&deg;C";}
+} else {
+	if ($metar34dewpointf>86) {echo '<div class=metartemptoday30>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>77) {echo '<div class=metartemptoday25>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>68) {echo '<div class=metartemptoday20>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>50) {echo '<div class=metartemptoday10>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>41) {echo '<div class=metartemptoday5>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+	else if ($metar34dewpointf>-50) {echo '<div class=metartemptoday0>'.$metar34dewpointf."<smalluvunit> &nbsp;&deg;F";}
+}
 ?></smalluvunit></div></div> 
  <div class="dewword">&nbsp;&nbsp;Dewpoint</div>
 
@@ -216,20 +248,67 @@ else if ($metar34humidity =='') {echo '<div class=metarhumtoday0-35>N/A<smalluvu
 </div></div></div> </div>      
 <div class="weather34card weather34card--earthquake2">  <div class="weather34card_weather34-container"> <div class="weather34card_weather34-wrapper"><span class="weather34card__count-text--big">
 
+<?php
+//set windspeed variables
+if ($windunit == 'km/h') {
+	$metarwind1 = 'kmh';
+	$metarwind2 = 'kts';
+	$metarwind3 = 'mph';
+	$metarwind4 = 'ms';
+} else if ($windunit == 'mph') {
+	$metarwind1 = 'mph';
+	$metarwind2 = 'kts';
+	$metarwind3 = 'kmh';
+	$metarwind4 = 'ms';
+} else if ($windunit == 'kts') {
+	$metarwind1 = 'kts';
+	$metarwind2 = 'mph';
+	$metarwind3 = 'kmh';
+	$metarwind4 = 'ms';
+} else {
+	$metarwind1 = 'ms';
+	$metarwind2 = 'mph';
+	$metarwind3 = 'kmh';
+	$metarwind4 = 'kts';
+}
+	if ($metar34windspeedkmh >=50) {$metarkmh = '<div class=metarwindtoday30>'.$metar34windspeedkmh."<smalluvunit> &nbsp;km/h";}
+	else if ($metar34windspeedkmh >=40) {$metarkmh = '<div class=metarwindtoday25>'.$metar34windspeedkmh."<smalluvunit>&nbsp; km/h";}
+	else if ($metar34windspeedkmh >=30) {$metarkmh = '<div class=metarwindtoday20>'.$metar34windspeedkmh."<smalluvunit>&nbsp; km/h";}
+	else if ($metar34windspeedkmh >0) {$metarkmh = '<div class=metarwindtoday10>'.$metar34windspeedkmh."<smalluvunit>&nbsp; km/h";}
+	else {$metarkmh = '<div class=metarwindtoday10>'.'0'."<smalluvunit>&nbsp; km/h";}
 
-<div class="metarwindcontainer2"><?php 
-if ($metar34windspeedkmh >50) {echo '<div class=metarwindtoday30>'.$metar34windspeedkmh."<smalluvunit> &nbsp;km/h";}
-else if ($metar34windspeedkmh >40) {echo '<div class=metarwindtoday25>'.$metar34windspeedkmh."<smalluvunit>&nbsp; km/h";}
-else if ($metar34windspeedkmh >30) {echo '<div class=metarwindtoday20>'.$metar34windspeedkmh."<smalluvunit>&nbsp; km/h";}
-else if ($metar34windspeedkmh >0) {echo '<div class=metarwindtoday10>'.$metar34windspeedkmh."<smalluvunit>&nbsp; km/h";}
+	if ($metar34windspeedmph >=31.06) {$metarmph = '<div class=metarwindtoday30>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
+	else if ($metar34windspeedmph >=24.85) {$metarmph = '<div class=metarwindtoday25>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
+	else if ($metar34windspeedmph >=18.6) {$metarmph = '<div class=metarwindtoday20>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
+	else if ($metar34windspeedmph >0) {$metarmph = '<div class=metarwindtoday10>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
+	else {$metarmph = '<div class=metarwindtoday10>'.'0'."<smalluvunit> &nbsp;mph";}
+
+	if ($metar34windspeedkts >=26.9) {$metarkts = '<div class=metarwindtoday30>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
+	else if ($metar34windspeedkts >=21.5) {$metarkts = '<div class=metarwindtoday25>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
+	else if ($metar34windspeedkts >=16.19) {$metarkts = '<div class=metarwindtoday20>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
+	else if ($metar34windspeedkts >0) {$metarkts = '<div class=metarwindtoday10>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
+	else {$metarkts = '<div class=metarwindtoday10>'.'0'."<smalluvunit> &nbsp;kts";}
+
+	if ($metar34windspeedms >=13.8) {$metarms = '<div class=metarwindtoday30>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
+	else if ($metar34windspeedms >=11.1) {$metarms = '<div class=metarwindtoday25>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
+	else if ($metar34windspeedms >=8.3) {$metarms = '<div class=metarwindtoday20>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
+	else if ($metar34windspeedms >0) {$metarms = '<div class=metarwindtoday10>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
+	else {$metarms = '<div class=metarwindtoday10>'.'0'."<smalluvunit> &nbsp;m/s";}
+
+$metarspot1 = 'metar'.$metarwind1;
+$metarspot2 = 'metar'.$metarwind2;
+$metarspot3 = 'metar'.$metarwind3;
+$metarspot4 = 'metar'.$metarwind4;
+?>
+<div class="metarwindcontainer2">
+<?php
+//wind1 kph
+echo $$metarspot1;
 ?></smalluvunit></div>
 <div class="windword">Wind Speed</div>
 <?php 
-//mph
-if ($metar34windspeedmph >=31.06) {echo '<div class=metarwindtoday30>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
-else if ($metar34windspeedmph >=24.85) {echo '<div class=metarwindtoday25>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
-else if ($metar34windspeedmph >=18.6) {echo '<div class=metarwindtoday20>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
-else if ($metar34windspeedmph >=0) {echo '<div class=metarwindtoday10>'.$metar34windspeedmph."<smalluvunit> &nbsp;mph";}
+//wind2 mph
+echo $$metarspot2;
 ?></smalluvunit></div>
 <div class="windword">Wind Speed</div></div>
 
@@ -237,20 +316,14 @@ else if ($metar34windspeedmph >=0) {echo '<div class=metarwindtoday10>'.$metar34
 
 <div class="metarwindcontainer3">
 <?php 
-//kts
-if ($metar34windspeedkts >=26.9) {echo '<div class=metarwindtoday30>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
-else if ($metar34windspeedkts >=21.5) {echo '<div class=metarwindtoday25>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
-else if ($metar34windspeedkts >=16.19) {echo '<div class=metarwindtoday20>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
-else if ($metar34windspeedkts >=0) {echo '<div class=metarwindtoday10>'.$metar34windspeedkts."<smalluvunit> &nbsp;kts";}
+//wind3 kts
+echo $$metarspot3;
 ?></smalluvunit></div>
 <div class="windword">Wind Speed</div>
 
 <?php 
-//m|s
-if ($metar34windspeedkts >=26.9) {echo '<div class=metarwindtoday30>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
-else if ($metar34windspeedkts >=21.5) {echo '<div class=metarwindtoday25>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
-else if ($metar34windspeedkts >=16.19) {echo '<div class=metarwindtoday20>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
-else if ($metar34windspeedkts >=0) {echo '<div class=metarwindtoday10>'.$metar34windspeedms."<smalluvunit> &nbsp;m/s";}
+//wind4 ms
+echo $$metarspot4;
 ?></smalluvunit></div>
 <div class="windword">Wind Speed</div></div>
 
@@ -292,8 +365,38 @@ else{echo "Due <span> North</span>";}?>
 <?php //min year 
  echo '<uppercase>',$sky_desc.'</uppercase> '; ?>
 <div class="lotemp">
-<div class="hitemp">Pressure <green> <?php echo $metar34pressuremb ," </green>(hPa)"; 	?> - <green><?php echo $metar34pressurehg ," </green>(in)"; 	?></span></div>
-<div class="hitemp">Visibility <yellow> <?php echo $metar34vismiles  ," </yellow>(mi)"; 	?> - <yellow><?php echo $metar34viskm  ," </yellow>(km)"; 	?></span></div>
+<div class="hitemp">Pressure <green>
+<?php
+if ($pressureunit == 'mb' || $pressureunit == 'hPa') {
+	echo $metar34pressuremb ," </green>(".$pressureunit.")";
+} else {
+	echo $metar34pressurehg ," </green>(inHG)";
+}
+
+?> - <green>
+<?php
+if ($pressureunit == 'mb' || $pressureunit == 'hPa') {
+	echo $metar34pressurehg ," </green>(inHG)";
+} else {
+	echo $metar34pressuremb ," </green>(mb)";
+}
+
+?></span></div>
+<div class="hitemp">Visibility <yellow>
+<?php
+if ($distanceunit == 'mi') {
+	echo $metar34vismiles  ," </yellow>(mi)";
+} else {
+	echo $metar34viskm ,"</yellow> (km)";
+}
+?> - <yellow>
+<?php
+if ($distanceunit =='mi') {
+	echo $metar34viskm  ," </yellow>(km)";
+} else {
+	echo $metar34vismiles ,"</yellow> (mi)";
+}
+?></span></div>
 <div class="icon"><img src=css/icons/clear.svg width=45px></div></div> </div> </div>
 <div class="weather34card__count-container"><div class="weather34card__count-textuv"><span class="weather34card__count-text--big">  </span></div>  
 <div class="weather34card__stuff-container"><br>
@@ -302,7 +405,18 @@ else{echo "Due <span> North</span>";}?>
 <div class="weather34card_weather34-container">
 <div class="weather34card_weather34-wrapper"><span class="weather34card__count-text--big">
 <div class="weather34-uvrate-bar" style="margin-top:0;"></div><?php echo $metar34stationid ; ?>
-</span> <div class="hitemp"><?php echo "Location <yellow>",$metar34stationname  ;?></yellow> 6<green>km</green> (3.2<green>mi</green>)
+</span> <div class="hitemp">
+<?php
+echo "Location <yellow>",$metar34stationname  ;
+echo '</yellow> <green>'.$airport1dist.'</green> '.$distanceunit.' (<green>';
+if ($distanceunit == 'mi') {
+	echo round($airport1dist * 1.609,2,PHP_ROUND_HALF_UP);
+	echo '</green> km)';
+} else {
+	echo round($airport1dist / 1.609,2,PHP_ROUND_HALF_UP);
+	echo '</green> mi)';
+}
+?>
  <div class="lotempraw">
 <?php //metar raw
 echo "<sup>Metar :" .$metar34raw."</greyuv>";?>
@@ -318,7 +432,7 @@ $date=str_replace('Z', ' ', $date);$date1 = strtotime($date) + 60*60*$UTC;echo d
 <span class="weather34card__count-text--big">  </span></div>  
 <div class="weather34card__stuff-container"><br>           
 <div class=actualt>Nearest Airport</div>
-<div class="icon"><a href="https://www.checkwx.com/" title="https://www.checkwx.com/" target="_blank"><img src=img/checkwx.svg width=80px alt="https://www.checkwx.com/"></a></div>
+<div class="icon"><a href="https://www.checkwx.com/weather/<?php echo $icao1;?>" title="https://www.checkwx.com/weather/<?php echo $icao1;?>" target="_blank"><img src=img/checkwx.svg width=80px alt="https://www.checkwx.com/weather/<?php echo $icao1;?>"></a></div>
 </section>
 <div class="provided">   
 &nbsp;<?php echo $info?> 
