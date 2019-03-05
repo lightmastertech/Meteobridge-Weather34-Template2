@@ -135,13 +135,13 @@ else if ($kp>=0) {echo 'Quiet';}
    <div class="weather34card weather34card--earthquake1">
                <div class="weather34card_weather34-container">
             <div class="weather34card_weather34-wrapper"><span class="weather34card__count-text--bigs" style="font-size:12px;">
-               <?php echo $info ;?> <orange>Guide</orange><br><green>KP-INDEX</green> figure provides a good indicator of viewing the <green>Aurora Borealis</green> or <green>Northern Lights</green> The greater the KP-Index the higher probability of viewing .The Estimated 3-hour Planetary Kp-index data is collected from ground-based magnetometers.
+               <?php echo $info ;?> <orange>Guide</orange><br><green>KP-INDEX</green> figure provides a good indicator of viewing the <green>Aurora Borealis</green> or <green>Northern Lights</green> The greater the KP-Index the higher probability of viewing. The Estimated 3-hour Planetary Kp-index data is collected from ground-based magnetometers.
             </div>
          </div></div>
     <div class="weather34card weather34card--earthquake2">
                <div class="weather34card_weather34-container">
             <div class="weather34card_weather34-wrapper"><span class="weather34card__count-text--bigs" style="font-size:12px;">
-               <?php echo $info ;?> <orange>Guide</orange><br><green>A-INDEX</green> is an indicator of possible enhanced VHF radio signal communication at a range of upto 1000 miles or more. During strong solar activity frequencies from 28 to 433MHZ or higher allowing radio communications to be possible at mid to high latitudes .
+               <?php echo $info ;?> <orange>Guide</orange><br><green>A-INDEX</green> is an indicator of possible enhanced VHF radio signal communication at a range of upto 1000 miles or more. During strong solar activity frequencies from 8 to 433MHZ or higher allowing radio communications to be possible at mid to high latitudes.
  <updated>               
  <?php echo '<svg viewBox="0 0 32 32" width=7 height=7 fill=#9aba2f stroke=#9aba2f stroke-linecap=round stroke-linejoin=round stroke-width=6.25%><path d="M16 14 L16 23 M16 8 L16 10" /><circle cx=16 cy=16 r=14 /></svg>';
 ; echo " Last Updated: ".date("H:i:s",filemtime('jsondata/kindex.txt'));?>

@@ -79,8 +79,8 @@ if ($weather["uv"]>10)  {echo 'Avoid being outside during midday hours! Make sur
 	else if ($weather["uv"]>8)  {echo 'Avoid being outside during midday hours! Make sure you seek a shaded area! Wear <orange>Sunscreen</orange> and hat, <orange>wear sunglasses</orange>.';} 
 	else if ($weather["uv"]>5)  {echo 'Seek shadea area during midday hours! Use sunscreen and a hat for protection, <orange>wear sunglasses</orange> during bright <orange>sunlight</orange periods.';} 	
 	else if ($weather["uv"]>3)  {echo ' During midday hours! caution use some form of  protection, <orange>wear sunglasses</orange> during bright <orange>sunlight</orange periods.';} 	
-	else if ($weather["uv"]>0)  {echo 'No advisory required . Safe for all skin types though be-aware of <orange>sunlight</orange> when <orange>sun</orange> approaches low horizon, <orange>wear sunglasses</orange>.';	} 	
-	else if ($weather["uv"]==0)  {echo 'No cautions required.The <orange>sun</orange> may be low on the horizon, obscured or below the horizon due to darkness hours.';} 
+	else if ($weather["uv"]>0)  {echo 'No advisory required. Safe for all skin types though be-aware of <orange>sunlight</orange> when <orange>sun</orange> approaches low horizon, <orange>wear sunglasses</orange>.';	} 	
+	else if ($weather["uv"]==0)  {echo 'No cautions required. The <orange>sun</orange> may be low on the horizon, obscured or below the horizon due to darkness hours.';} 
 ?></div>
                 
             </div>
@@ -195,8 +195,8 @@ else if ($weather["solar"]>=0) {echo '<div class=solartoday1>'.number_format($we
 echo '<red>8-10</red> UVI Avoid being outside during midday hours! Make sure you seek a shaded area! Wear <orange>Sunscreen</orange> and hat, <orange>wear sunglasses</orange>.<br>'; 
 echo '<orange>6-8</orange> UVI Seek shadea area during midday hours! Use sunscreen and a hat for protection, <orange>wear sunglasses</orange> during bright <orange>sunlight</orange> periods.<br>'; 	
 echo '<yellow>3-5</yellow> UVI During midday hours! caution use some form of  protection, <orange>wear sunglasses</orange> during bright <orange>sunlight</orange> periods.<br>'; 	
-echo '<green>1-3</green> UVI No advisory required . Safe for all skin types though be-aware of <orange>sunlight</orange> when <orange>sun</orange> approaches low horizon, <orange>wear sunglasses</orange>.<br>';	 	
-echo '<green>0</green> UVI No cautions required.The <orange>sun</orange> may be low on the horizon, obscured or below the horizon due to darkness hours.<br>'; 
+echo '<green>1-3</green> UVI No advisory required. Safe for all skin types though be aware of <orange>sunlight</orange> when <orange>sun</orange> approaches low horizon, <orange>wear sunglasses</orange>.<br>';	 	
+echo '<green>0</green> UVI No cautions required. The <orange>sun</orange> may be low on the horizon, obscured or below the horizon due to darkness hours.<br>'; 
 ?></span></div>
         </div></div>
         
@@ -263,7 +263,7 @@ else if ($weather["lux"]>=0) {echo '<div class=luxtoday1>'.number_format($weathe
 	echo " ";	
 	if ($weather["lux"]>=0)  {
 	echo "<orange>Lux measurement</orange><br>";
-	echo '<greyuv>Measures the approximate human eye response to light under a variety of lighting conditions.The total amount of all the light measured is known as the “luminous flux”.</greyuv><br>';}	
+	echo '<greyuv>Measures the approximate human eye response to light under a variety of lighting conditions. The total amount of all the light measured is known as the “luminous flux”.</greyuv><br>';}	
 	else echo "LUX DATA NOT AVAILABLE";
 	
 

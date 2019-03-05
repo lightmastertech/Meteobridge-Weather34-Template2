@@ -178,7 +178,7 @@ background:rgba(11, 12, 12, 0.4); background-repeat:no-repeat}body{color:#aaa;ov
     <div class="weather34card weather34card--earthquake2">
                <div class="weather34card_weather34-container">
             <div class="weather34card_weather34-wrapper"><span class="weather34card__count-text--bigsa" style="font-size:12px;">
-           <?php echo $info ;?> <orange>Guide</orange><br><green>Meteors</green> are best viewed during the night hours, though meteors enter the atmosphere at any time of the day. They are just harder to see in the daylight apart from dawn and dusk. Any nearby ambient light,Moon light can make it difficult viewing . Meteor showers are best viewed away from the city lights.
+           <?php echo $info ;?> <orange>Guide</orange><br><green>Meteors</green> are best viewed during the night hours, though meteors enter the atmosphere at any time of the day. They are just harder to see in the daylight apart from dawn and dusk. Any nearby ambient light, Moon light can make it difficult viewing. Meteor showers are best viewed away from the city lights.
             </div>
         
         
