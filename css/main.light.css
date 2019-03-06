@@ -6332,7 +6332,8 @@ gustorange {
 
 darkskytemplohome uv {
   font-size: .6rem;
-  font-weight: 500
+  font-weight: 500;
+  color: #2d3a4b
 }
 
 darkskyforecasthome darkskytemplohome,
