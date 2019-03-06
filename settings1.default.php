@@ -107,3 +107,4 @@ $cwopid =       "F0000";
 $pbactive =     "yes";
 $pbtoken =      "o.01234567890123456789012345678901";
 $pbchannel =    "pbchannel";
+$pbpassword =   "";

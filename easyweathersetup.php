@@ -118,6 +118,7 @@ $cwopid =       "'.$_POST["cwopid"]. '";
 $pbactive =     "'.$_POST["pbactive"]. '";
 $pbtoken =      "'.$_POST["pbtoken"]. '";
 $pbchannel =    "'.$_POST["pbchannel"]. '";
+$pbpassword =   "'.$_POST["pbpassword"]. '";
 ';
  
 $fp = FOPEN("settings1.php", "w") or die("Unable to open settings1.php file check file permissions !");
@@ -2215,6 +2216,15 @@ Leave as the default generic code or leave it blank if you don't want to use Goo
   
   <div class="weatheroptionssidebar"><svg id="i-info" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
     <path d="M16 14 L16 23 M16 8 L16 10" /><circle cx="16" cy="16" r="14" /></svg>
+    Make this password different from other passwords on this site, as it might be sent in plaintext if you don't have https setup.<br/>
+    <svg id="i-alert" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M16 3 L30 29 2 29 Z M16 11 L16 19 M16 23 L16 25" />
+</svg> Do <strong>NOT</strong> use symbols in this password, only url valid characters.
+   <br/><br/><br/>
+   
+   
+    <svg id="i-info" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M16 14 L16 23 M16 8 L16 10" /><circle cx="16" cy="16" r="14" /></svg>
     <a href="https://www.pushbullet.com/" title="https://www.pushbullet.com/" target="_blank">1. Sign up for <strong><span style="color:#F8712E;">Pushbullet</span></strong></a>
    <br/>
     <a href="https://www.pushbullet.com/my-channel" title="https://www.pushbullet.com/my-channel" target="_blank"> 2. Create your <strong><span style="color:#F8712E;">PB Channel</span></strong></a>
@@ -2224,7 +2234,6 @@ Leave as the default generic code or leave it blank if you don't want to use Goo
    <div class="weatherbottominfo">
 
 </div>
-   
    </div>
   
   
@@ -2237,6 +2246,18 @@ Leave as the default generic code or leave it blank if you don't want to use Goo
    Pushbullet Services
     </div>
  <br/>
+
+  
+  <div class= "stationvalue">  Set Pushbullet password</div>
+<svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M12 30 L24 16 12 2" />
+</svg>
+  <input name="pbpassword" type="pbpassword" id="pbpassword" value="<?php echo $pbpassword ;?>" class="choose">
+    <br/>
+    <svg id="i-alert" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+    <path d="M16 3 L30 29 2 29 Z M16 11 L16 19 M16 23 L16 25" />
+    </svg> <span style="color:#777;">Do <strong>NOT</strong> use symbols in this password, only url valid characters (ie: <strong>alphanumerical</strong>).</span>
+  <br/>
     
   <div class= "stationvalue">Pushbullet Token: </div> 
     <svg id="i-chevron-right" viewBox="0 0 32 32" width="14" height="14" fill="none" stroke="rgba(86, 95, 103, 1.000)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">

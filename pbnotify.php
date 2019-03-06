@@ -11,6 +11,18 @@ include_once('settings1.php');
 
 $alarm = $_GET['alarm'];
 $value = $_GET['value'];
+$Password  = $pbpassword;
+if (isset($_GET['pwd'])){
+  $pass = isset($_GET['pwd']) ? $_GET['pwd'] : '';
+  if ($pass != $Password) {
+    #die("Invalid Password!");
+    die();
+  }
+} else {
+  #die("Invalid Password");
+  die();
+} 
+#echo("Valid Password");
 switch ($alarm) {
     case 'HeatIndex':
         $title = 'Heat Index Alert';
