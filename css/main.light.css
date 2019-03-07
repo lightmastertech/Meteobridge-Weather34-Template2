@@ -5220,9 +5220,10 @@ smallsup {
 .outside41-45,
 .outside50,
 .outside6-10,
-.outsideminus,
+.outsideminus10,
 .outsideminus5,
-.outsidezero {
+.outsidezero,
+.outsideminus {
   font-family: weathertext2;
   width: 6rem;
   height: 5.5rem;
@@ -5239,96 +5240,75 @@ smallsup {
   border-radius: 3px
 }
 
-.maxdata,
-.raintoday1 {
-  align-items: center;
-  display: flex
+.outsideminus10 {
+  background: #3369e7;
+  background: -webkit-linear-gradient(45deg, #ab49de, #3369e7);
+  background: linear-gradient(45deg, #ab49de, #3369e7);
 }
 
-.maxdata,
-.windrun1 {
-  justify-content: center
+.outsideminus5 {
+  background: #3b9cac;
+  background: -webkit-linear-gradient(45deg, #ab49de, #3b9cac);
+  background: linear-gradient(45deg, #ab49de, #3b9cac);
 }
 
-.outsideminus,
-.outsideminus5,
-.outsidezero {
-  background: rgba(0, 164, 180, .8);
+.outsideminus {
+  background: #00a4b4;
   background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: -o-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: -moz-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: -ms-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
+  background: linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1))
+}
+
+.outsidezero {
+  background: #00a4b4;
+  background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
   background: linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1))
 }
 
 .outside0-5 {
-  background: rgba(0, 164, 180, 1);
+  background: #00a4b4;
   background: -webkit-linear-gradient(270deg, #00a4b4, #087883);
-  background: -o-linear-gradient(270deg, #00a4b4, #087883);
-  background: -moz-linear-gradient(270deg, #00a4b4, #087883);
-  background: -ms-linear-gradient(270deg, #00a4b4, #087883);
   background: linear-gradient(270deg, #00a4b4, #087883)
 }
 
 .outside6-10 {
   background: #88b04b;
   background: -webkit-linear-gradient(90deg, #00a4b4, #88b04b);
-  background: -o-linear-gradient(90deg, #00a4b4, #88b04b);
-  background: -moz-linear-gradient(90deg, #00a4b4, #88b04b);
-  background: -ms-linear-gradient(90deg, #00a4b4, #88b04b);
   background: linear-gradient(90deg, #00a4b4, #88b04b)
 }
 
 .outside11-15 {
-  background: 0 0;
+  background: #e6a141;
   background: -webkit-linear-gradient(90deg, #90b12a, #e6a141);
-  background: -o-linear-gradient(90deg, #90b12a, #e6a141);
-  background: -moz-linear-gradient(90deg, #90b12a, #e6a141);
-  background: -ms-linear-gradient(90deg, #90b12a, #e6a141);
   background: linear-gradient(90deg, #90b12a, #e6a141)
 }
 
 .outside16-20 {
   background: #ff7c39;
   background: -webkit-linear-gradient(90deg, #90b12a, #ff7c39);
-  background: -o-linear-gradient(90deg, #90b12a, #ff7c39);
-  background: -moz-linear-gradient(90deg, #90b12a, #ff7c39);
-  background: -ms-linear-gradient(90deg, #90b12a, #e6a141);
   background: linear-gradient(90deg, #90b12a, #ff7c39)
 }
 
 .outside21-25 {
   background: #efa80f;
   background: -webkit-linear-gradient(90deg, #efa80f, #d86858);
-  background: -o-linear-gradient(90deg, #efa80f, #d86858);
-  background: -moz-linear-gradient(90deg, #efa80f, #d86858);
-  background: -ms-linear-gradient(90deg, #efa80f, #d86858);
   background: linear-gradient(90deg, #efa80f, #d86858)
 }
 
 .outside26-30 {
-  background: -webkit-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: -o-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: -moz-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: -ms-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1))
+  background: #d05f2d;
+  background: -webkit-linear-gradient(90deg, #d05f2d, rgba(236, 102, 21, 1));
+  background: linear-gradient(90deg, #d05f2d, rgba(236, 102, 21, 1))
 }
 
 .outside31-35 {
   background: #d86858;
   background: -webkit-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
-  background: -o-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
-  background: -moz-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
-  background: -ms-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
   background: linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7))
 }
 
 .outside36-40 {
   background: #fd7641;
   background: -webkit-linear-gradient(90deg, #fd7641, #637ff6);
-  background: -o-linear-gradient(90deg, #fd7641, #637ff6);
-  background: -moz-linear-gradient(90deg, #fd7641, #637ff6);
-  background: -ms-linear-gradient(90deg, #fd7641, #637ff6);
   background: linear-gradient(90deg, #fd7641, #637ff6)
 }
 
@@ -5336,9 +5316,6 @@ smallsup {
 .outside50 {
   background: #de2c52;
   background: -webkit-linear-gradient(90deg, #de2c52, #637ff6);
-  background: -o-linear-gradient(90deg, #de2c52, #637ff6);
-  background: -moz-linear-gradient(90deg, #de2c52, #637ff6);
-  background: -ms-linear-gradient(90deg, #de2c52, #637ff6);
   background: linear-gradient(90deg, #de2c52, #637ff6)
 }
 
@@ -8176,6 +8153,7 @@ purpleu {
   font-family: weathertext2
 }
 
+.tempconvertercircleminus,
 .tempconvertercircleminus10,
 .tempconvertercircleminus5,
 .tempconvertercircle0-5,
@@ -8203,84 +8181,75 @@ purpleu {
   font-size: .85em
 }
 
-.tempconvertercircleminus10,
+.tempconvertercircleminus10 {
+  background: #3369e7;
+  background: -webkit-linear-gradient(45deg, #ab49de, #3369e7);
+  background: linear-gradient(45deg, #ab49de, #3369e7);
+}
+
 .tempconvertercircleminus5 {
-  background: rgba(0, 164, 180, .8);
+  background: #3b9cac;
+  background: -webkit-linear-gradient(45deg, #ab49de, #3b9cac);
+  background: linear-gradient(45deg, #ab49de, #3b9cac);
+}
+
+.tempconvertercircleminus {
+  background: #00a4b4;
   background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: -o-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: -moz-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: -ms-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
+  background: linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1))
+}
+
+.tempconvertercirclezero {
+  background: #00a4b4;
+  background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
   background: linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1))
 }
 
 .tempconvertercircle0-5 {
-  background: rgba(0, 164, 180, 1);
+  background: #00a4b4;
   background: -webkit-linear-gradient(270deg, #00a4b4, #087883);
-  background: -o-linear-gradient(270deg, #00a4b4, #087883);
-  background: -moz-linear-gradient(270deg, #00a4b4, #087883);
-  background: -ms-linear-gradient(270deg, #00a4b4, #087883);
   background: linear-gradient(270deg, #00a4b4, #087883)
 }
 
 .tempconvertercircle6-10 {
   background: #88b04b;
   background: -webkit-linear-gradient(90deg, #00a4b4, #88b04b);
-  background: -o-linear-gradient(90deg, #00a4b4, #88b04b);
-  background: -moz-linear-gradient(90deg, #00a4b4, #88b04b);
-  background: -ms-linear-gradient(90deg, #00a4b4, #88b04b);
   background: linear-gradient(90deg, #00a4b4, #88b04b)
 }
 
 .tempconvertercircle11-15 {
-  background: 0 0;
+  background: #e6a141;
   background: -webkit-linear-gradient(90deg, #90b12a, #e6a141);
-  background: -o-linear-gradient(90deg, #90b12a, #e6a141);
-  background: -moz-linear-gradient(90deg, #90b12a, #e6a141);
-  background: -ms-linear-gradient(90deg, #90b12a, #e6a141);
   background: linear-gradient(90deg, #90b12a, #e6a141)
 }
 
 .tempconvertercircle16-20 {
   background: #ff7c39;
   background: -webkit-linear-gradient(90deg, #90b12a, #ff7c39);
-  background: -o-linear-gradient(90deg, #90b12a, #ff7c39);
-  background: -moz-linear-gradient(90deg, #90b12a, #ff7c39);
-  background: -ms-linear-gradient(90deg, #90b12a, #e6a141);
   background: linear-gradient(90deg, #90b12a, #ff7c39)
 }
 
 .tempconvertercircle21-25 {
   background: #efa80f;
   background: -webkit-linear-gradient(90deg, #efa80f, #d86858);
-  background: -o-linear-gradient(90deg, #efa80f, #d86858);
-  background: -moz-linear-gradient(90deg, #efa80f, #d86858);
-  background: -ms-linear-gradient(90deg, #efa80f, #d86858);
   background: linear-gradient(90deg, #efa80f, #d86858)
 }
 
 .tempconvertercircle26-30 {
-  background: -webkit-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: -o-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: -moz-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: -ms-linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1));
-  background: linear-gradient(90deg, #d86858, rgba(236, 102, 21, 1))
+  background: #d05f2d;
+  background: -webkit-linear-gradient(90deg, #d05f2d, rgba(236, 102, 21, 1));
+  background: linear-gradient(90deg, #d05f2d, rgba(236, 102, 21, 1))
 }
 
 .tempconvertercircle31-35 {
   background: #d86858;
   background: -webkit-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
-  background: -o-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
-  background: -moz-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
-  background: -ms-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
   background: linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7))
 }
 
 .tempconvertercircle36-40 {
   background: #fd7641;
   background: -webkit-linear-gradient(90deg, #fd7641, #637ff6);
-  background: -o-linear-gradient(90deg, #fd7641, #637ff6);
-  background: -moz-linear-gradient(90deg, #fd7641, #637ff6);
-  background: -ms-linear-gradient(90deg, #fd7641, #637ff6);
   background: linear-gradient(90deg, #fd7641, #637ff6)
 }
 
@@ -8288,9 +8257,6 @@ purpleu {
 .tempconvertercircle50 {
   background: #de2c52;
   background: -webkit-linear-gradient(90deg, #de2c52, #637ff6);
-  background: -o-linear-gradient(90deg, #de2c52, #637ff6);
-  background: -moz-linear-gradient(90deg, #de2c52, #637ff6);
-  background: -ms-linear-gradient(90deg, #de2c52, #637ff6);
   background: linear-gradient(90deg, #de2c52, #637ff6)
 }
 
