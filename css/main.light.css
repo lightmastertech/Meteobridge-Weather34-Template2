@@ -3731,20 +3731,14 @@ minutes {
 
 .sundarkday {
   margin-left: 215px;
-  text-align: center
-}
-
-.sunsetday {
-  margin-left: 210px;
-  text-align: center
-}
-
-.sundarkday {
+  text-align: center;
   line-height: 9px;
   margin-top: 0
 }
 
 .sunsetday {
+  margin-left: 210px;
+  text-align: center;
   margin-top: 128px;
   font: .6rem arial, system;
   line-height: 9px
@@ -4107,33 +4101,9 @@ suplight {
   font-size: .6em
 }
 
-.darkskynexthours,
-.darkskynexthours span1,
-.darkskynexthours span2 {
-  color: #2d3a4b;
-  font-family: Arial, Helvetica, system
-}
-
 .weatherclock34,
 heatindex {
   color: #2d2d2d
-}
-
-.darkskynexthours span1,
-.darkskynexthours span2 {
-  font-size: 12px
-}
-
-.darkskyiconcurrent {
-  postion: relative;
-  margin-top: 20px;
-  margin-bottom: -5px;
-  margin-left: 35px;
-  float: left
-}
-
-.darkskyiconcurrent span1 {
-  font-size: .9em
 }
 
 heatindex {
@@ -5037,9 +5007,9 @@ smallrainunit {
 .tempconvertercircleblue,
 .tempconvertercirclegreen,
 .tempconvertercircleorange,
+.tempconvertercirclepurple,
 .tempconvertercirclered,
-.tempconvertercircleyellow,
-.tempconvertercirclepurple {
+.tempconvertercircleyellow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5220,10 +5190,10 @@ smallsup {
 .outside41-45,
 .outside50,
 .outside6-10,
+.outsideminus,
 .outsideminus10,
 .outsideminus5,
-.outsidezero,
-.outsideminus {
+.outsidezero {
   font-family: weathertext2;
   width: 6rem;
   height: 5.5rem;
@@ -5243,21 +5213,16 @@ smallsup {
 .outsideminus10 {
   background: #3369e7;
   background: -webkit-linear-gradient(45deg, #ab49de, #3369e7);
-  background: linear-gradient(45deg, #ab49de, #3369e7);
+  background: linear-gradient(45deg, #ab49de, #3369e7)
 }
 
 .outsideminus5 {
   background: #3b9cac;
   background: -webkit-linear-gradient(45deg, #ab49de, #3b9cac);
-  background: linear-gradient(45deg, #ab49de, #3b9cac);
+  background: linear-gradient(45deg, #ab49de, #3b9cac)
 }
 
-.outsideminus {
-  background: #00a4b4;
-  background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1))
-}
-
+.outsideminus,
 .outsidezero {
   background: #00a4b4;
   background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
@@ -5667,7 +5632,7 @@ img.menuimg {
 .elevationword {
   font-size: .6rem;
   position: absolute;
-  color: #2d3a4b
+  color: #2d3a4b)
 }
 
 .sundialcontainerdiv2 {
@@ -6273,10 +6238,6 @@ weather34windrunspan {
   margin-top: 0;
   margin-left: 1%;
   font-weight: 500
-}
-
-.darkskyforecasthome darkskytemphihome {
-  color: #d05f2d
 }
 
 .darkskyforecasthome darkskytemphihome span {
@@ -7858,6 +7819,12 @@ topblue1 {
   color: #e6e8ef
 }
 
+.updatedtimedir,
+.updatedtimeuv span,
+weather34 {
+  color: #2d3a4b
+}
+
 .updatedtime,
 .updatedtimealert,
 .updatedtimecurrent,
@@ -7883,10 +7850,6 @@ updatedtime1 {
   line-height: 10px
 }
 
-.updatedtimeuv span {
-  color: #2d3a4b
-}
-
 .updatedtimecurrent {
   margin-top: -18px;
   font: .65em weathertext2;
@@ -7905,12 +7868,16 @@ updatedtime1 {
   margin-top: -25px;
   margin-left: 135px;
   position: absolute;
-  color: #2d3a4b;
   font: .65em weathertext2;
   line-height: 10px;
   border-radius: 2px;
   background: 0;
   padding: 3px
+}
+
+purplet,
+redt {
+  background: #d86858
 }
 
 updatedtime {
@@ -7942,14 +7909,22 @@ weather34 {
   margin-top: -4px;
   margin-left: 45px;
   display: block;
-  width: 100px;
-  color: #2d3a4b
+  width: 100px
 }
 
 .vp2container {
   display: flex;
   justify-content: center;
   align-items: center
+}
+
+.inheatcircle-content,
+.inheatcircle2-content {
+  float: left;
+  text-align: center;
+  display: block;
+  padding: 0;
+  color: #2d3a4b
 }
 
 .consoleoutlook {
@@ -7994,14 +7969,9 @@ raiblue {
 
 .inheatcircle-content {
   position: absolute;
-  color: #2d3a4b;
-  float: left;
   margin-left: -4px;
-  padding: 0;
-  text-align: center;
   width: 160px;
   font: 500 11px weathertext2;
-  display: block;
   line-height: 15px
 }
 
@@ -8015,16 +7985,16 @@ raiblue {
 
 .inheatcircle2-content {
   position: absolute;
-  color: #2d3a4b;
-  float: left;
   margin-top: 35px;
   margin-left: -5px;
-  padding: 0;
-  text-align: center;
   width: 160px;
   font: 500 11px weathertext2;
-  display: block;
   line-height: 15px
+}
+
+greyu,
+valuetitleunit {
+  font-family: weathertext2
 }
 
 .heatcircle7 {
@@ -8102,15 +8072,30 @@ raiblue {
   border-bottom-right-radius: 2px
 }
 
+bluet,
+greent,
+oranget,
+purplet,
+redt,
+yellowt {
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 2px;
+  width: 35px;
+  padding: 0 3px
+}
+
 greyu {
   font-size: .55rem;
-  font-family: weathertext2;
   color: #2d3a4b
 }
 
 valuetitleunit {
-  font-size: .8em;
-  font-family: weathertext2
+  font-size: .8em
+}
+
+blueu {
+  color: #39739f
 }
 
 orangeu {
@@ -8122,7 +8107,7 @@ greenu {
 }
 
 yellowu {
-  color: #e6a141;
+  color: #e6a141
 }
 
 redu {
@@ -8133,31 +8118,52 @@ purpleu {
   color: #b600b0
 }
 
+bluet {
+  background: #01a4b5
+}
+
+yellowt {
+  background: #e6a141
+}
+
+oranget {
+  background: #d05f2d
+}
+
+greent {
+  background: #90b12a
+}
+
+redt {
+  background: -webkit-linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7));
+  background: linear-gradient(90deg, #d86858, rgba(211, 93, 78, .7))
+}
+
+purplet {
+  background: -webkit-linear-gradient(90deg, #d86858, rgba(157, 59, 165, .4));
+  background: linear-gradient(90deg, #d86858, rgba(157, 59, 165, .4))
+}
+
+.airqualitywordbig,
 .uvsolarwordbig {
   position: absolute;
-  margin-left: 115px;
-  margin-top: 35px;
   font-size: 1.4rem;
   color: rgba(86, 95, 103, .2);
   width: 200px;
   font-family: weathertext2
+}
+
+.uvsolarwordbig {
+  margin-left: 115px;
+  margin-top: 35px
 }
 
 .airqualitywordbig {
-  position: absolute;
   margin-left: 50px;
-  margin-top: 15px;
-  font-size: 1.4rem;
-  color: rgba(86, 95, 103, .2);
-  width: 200px;
-  font-family: weathertext2
+  margin-top: 15px
 }
 
-.tempconvertercircleminus,
-.tempconvertercircleminus10,
-.tempconvertercircleminus5,
 .tempconvertercircle0-5,
-.tempconvertercircle6-10,
 .tempconvertercircle11-15,
 .tempconvertercircle16-20,
 .tempconvertercircle21-25,
@@ -8165,7 +8171,11 @@ purpleu {
 .tempconvertercircle31-35,
 .tempconvertercircle36-40,
 .tempconvertercircle41-45,
-.tempconvertercircle50 {
+.tempconvertercircle50,
+.tempconvertercircle6-10,
+.tempconvertercircleminus,
+.tempconvertercircleminus10,
+.tempconvertercircleminus5 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8184,21 +8194,16 @@ purpleu {
 .tempconvertercircleminus10 {
   background: #3369e7;
   background: -webkit-linear-gradient(45deg, #ab49de, #3369e7);
-  background: linear-gradient(45deg, #ab49de, #3369e7);
+  background: linear-gradient(45deg, #ab49de, #3369e7)
 }
 
 .tempconvertercircleminus5 {
   background: #3b9cac;
   background: -webkit-linear-gradient(45deg, #ab49de, #3b9cac);
-  background: linear-gradient(45deg, #ab49de, #3b9cac);
+  background: linear-gradient(45deg, #ab49de, #3b9cac)
 }
 
-.tempconvertercircleminus {
-  background: #00a4b4;
-  background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
-  background: linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1))
-}
-
+.tempconvertercircleminus,
 .tempconvertercirclezero {
   background: #00a4b4;
   background: -webkit-linear-gradient(270deg, #00a4b4, rgba(80, 69, 188, 1));
@@ -8261,5 +8266,5 @@ purpleu {
 }
 
 .darkskyhomeicons {
-  margin-bottom: -2px;
+  margin-bottom: -2px
 }
