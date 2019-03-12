@@ -96,6 +96,10 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["uptime"]		       = $meteobridgeapi[81];//uptime in seconds
 	$weather["vpforecasttext"]	   = $meteobridgeapi1[1];
 	$weather["temp_avgtoday"]=$meteobridgeapi[152];
+	$weather['wind_speed_avg30']=$meteobridgeapi[158];
+	//weather34 windrun
+	$windrunhr=date('G');$windrunmin=(($windrunmin=date('i')/60));$windrunformula=$windrunhr=date('G')+$windrunmin;
+	$weather["windrun34"]=$weather['wind_speed_avg30']*number_format($windrunformula,1);
 	//weather34 meteobridge moon sun data 
     $weather["moonphase"]=$meteobridgeapi[153];$weather["luminance"]=$meteobridgeapi[154];$weather["daylight"]=$meteobridgeapi[155];if ($meteobridgeapi[156]=='--'){$weather["moonrise"]='In Transit';}
 	else $weather["moonrise"]='Rise<moonrisecolor> '.date($timeFormatShort, strtotime($meteobridgeapi[156]));$weather["moonset"]='Set<moonsetcolor> '.date($timeFormatShort, strtotime($meteobridgeapi[157]));
@@ -173,8 +177,8 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["tempdmin"]		    = $meteobridgeapi[28]; //temp max today
 	$weather["tempdmintime"]		= $tempdmintime; //seconds	
 	
-	//dewpoint alltime
-	
+	//dewpoint year/month/yesterday alltime
+	//all time
 	$originalDatea11 = $meteobridgeapi[130];
     $dewamaxtime = date("jS M Y", strtotime($originalDatea11));
 	$weather["dewamax"]		    = $meteobridgeapi[129]; //temp alltime
@@ -188,9 +192,9 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	
 	//dewpoint year
 	$originalDate44 = $meteobridgeapi[55];
-    $dewymaxtime = date('jS M H:i', strtotime($originalDate44));	
+    $dewymaxtime = date('jS M', strtotime($originalDate44));	
 	$originalDate45 = $meteobridgeapi[57];
-    $dewymintime =  date('jS M H:i', strtotime($originalDate45));	
+    $dewymintime =  date('jS M', strtotime($originalDate45));	
 	$weather["dewymax"]		    = $meteobridgeapi[54]; //temp max year
 	$weather["dewymaxtime"]		= $dewymaxtime; //seconds	
 	$weather["dewymin"]		    = $meteobridgeapi[56]; //temp min year
@@ -206,22 +210,70 @@ if ($livedataFormat == 'meteobridge-api' && $livedata) {
 	$weather["dewmintime"]		= $dewmintime; //seconds
 	//dewpoint month
 	$originalDate74 = $meteobridgeapi[49];
-    $dewmmaxtime = date('jS M H:i', strtotime($originalDate74));	
+    $dewmmaxtime = date('jS M', strtotime($originalDate74));	
 	$originalDate75 = $meteobridgeapi[51];
-    $dewmmintime =  date('jS M H:i', strtotime($originalDate75));	
+    $dewmmintime =  date('jS M', strtotime($originalDate75));	
 	$weather["dewmmax"]		    = $meteobridgeapi[48]; //dew max month
 	$weather["dewmmaxtime"]		= $dewmmaxtime; //seconds	
 	$weather["dewmmin"]		    = $meteobridgeapi[50]; //dew min month
 	$weather["dewmmintime"]		= $dewmmintime; //seconds	
 	//dewpoint yesterday
 	$originalDate84 = $meteobridgeapi[53];
-    $dewydmaxtime = date('jS M H:i', strtotime($originalDate84));	
+    $dewydmaxtime = date('H:i', strtotime($originalDate84));	
 	$originalDate85 = $meteobridgeapi[121];
-    $dewydmintime =  date('jS M H:i', strtotime($originalDate85));	
+    $dewydmintime =  date('H:i', strtotime($originalDate85));	
 	$weather["dewydmax"]		    = $meteobridgeapi[52]; //temp max year
 	$weather["dewydmaxtime"]		= $dewydmaxtime; //seconds	
 	$weather["dewydmin"]		    = $meteobridgeapi[120]; //temp min year
-	$weather["dewydmintime"]		= $dewydmintime; //seconds		
+	$weather["dewydmintime"]		= $dewydmintime; //seconds	
+	
+//humidity almanac	
+//hum max
+$weather["humidity_max"]=number_format($meteobridgeapi[59],0);
+$originalDate734=$meteobridgeapi[60];
+$hummaxtime=date('H:i',strtotime($originalDate734));
+$weather["humidity_maxtime"]=$hummaxtime;
+//hum min
+$weather["humidity_min"]=number_format($meteobridgeapi[61],0);
+$originalDate774=$meteobridgeapi[62];
+$hummintime=date('H:i',strtotime($originalDate774));
+$weather["humidity_mintime"]=$hummintime;
+
+//hum year max
+$weather["humidity_ymax"]=number_format($meteobridgeapi[163],0);
+$originalDate754=$meteobridgeapi[164];
+$humymaxtime=date('jS M',strtotime($originalDate754));
+$weather["humidity_ymaxtime"]=$humymaxtime;
+//hum year min
+$weather["humidity_ymin"]=number_format($meteobridgeapi[165],0);
+$originalDate755=$meteobridgeapi[166];
+$humymintime=date('jS M',strtotime($originalDate755));
+$weather["humidity_ymintime"]=$humymintime;
+
+//hum month max
+$weather["humidity_mmax"]=number_format($meteobridgeapi[159],0);
+$originalDate756=$meteobridgeapi[160];
+$hummmaxtime=date('jS M',strtotime($originalDate756));
+$weather["humidity_mmaxtime"]=$hummmaxtime;
+//hum month min
+$weather["humidity_mmin"]=number_format($meteobridgeapi[161],0);
+$originalDate757=$meteobridgeapi[162];
+$hummmintime=date('jS M',strtotime($originalDate757));
+$weather["humidity_mmintime"]=$hummmintime;
+
+//hum yesterday max
+$weather["humidity_ydmax"]=number_format($meteobridgeapi[167],0);
+$originalDate758=$meteobridgeapi[168];
+$humydmaxtime=date('H:i',strtotime($originalDate758));
+$weather["humidity_ydmaxtime"]=$humydmaxtime;
+//hum yesterday min
+$weather["humidity_ydmin"]=number_format($meteobridgeapi[169],0);
+$originalDate759=$meteobridgeapi[170];
+$humydmintime=date('H:i',strtotime($originalDate759));
+$weather["humidity_ydmintime"]=$humydmintime;
+
+
+		
 	
 	//wind gust
 	$originalDate8 = $meteobridgeapi[95];
