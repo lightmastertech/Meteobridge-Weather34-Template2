@@ -131,6 +131,13 @@ include_once('livedata.php');include_once('common.php');include_once('settings1.
   <div class="weather-item"><div class="chartforecast">
          <!-- HOURLY & Outlook for homeweather station-->
   <span class="yearpopup"> <a alt="nearby metar station" title="nearby metar station" href="metarnearby.php" data-featherlight="iframe"><?php echo $chartinfo?> <?php echo 'Nearby Metar';?> <?php if(filesize('jsondata/metar34.txt')<160){echo "(<ored>Offline</ored>)";}else echo "" ?></a></span>
+    <?php
+  //echo '<span class="monthpopup"><a href="https://embed.windy.com/embed2.html?lat='.$lat.'&lon='.$lon.'&zoom=8&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat='.$lat.'&detailLon='.$lon.'&metricWind=default&metricTemp=default&radarRange=-1" title="Windy.com Radar" alt="Windy.com Radar" data-featherlight="iframe">'.$chartinfo.' Radar</a></span>'
+  echo '<span class="monthpopup"><a href="windyradar.php" title="Windy.com Radar" alt="Windy.com Radar" data-featherlight="iframe">'.$chartinfo.' Radar</a></span>';
+  echo '<span class="monthpopup"><a href="windywind.php" title="Windy.com Wind Map" alt="Windy.com Wind Map" data-featherlight="iframe">'.$chartinfo.' Wind Map</a></span>';
+  ?>
+      
+      <!--<iframe width="650" height="450" src="https://embed.windy.com/embed2.html?lat=31.787&lon=-82.299&zoom=9&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=31.575&detailLon=-81.708&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1" frameborder="0"></iframe>-->
 
          </div>
   <span class='moduletitle'><?php echo $lang['Currentsky'];?></span><br />
