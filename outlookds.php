@@ -63,11 +63,25 @@ blueu{background:#01a4b5}zerou{color:#777}yellowu{background:#e6a141}orangeu{bac
 			$darkskydayUV = $cond['uvIndex'];
 			$darkskydayPrecipProb = $cond['precipProbability']*100;
 			
-            if (isset($cond['precipType'])){
-            $darkskydayPrecipType = $cond['precipType'];}
-			$darkskydayacumm=round($cond['precipAccumulation'],1);
-			$darkskydayprecipIntensity = number_format($cond['precipIntensityMax'],1);         
-           //si wind is m/s
+           if (isset($cond['precipType'])){$darkskydayPrecipType = $cond['precipType'];}
+if ($rainunit=='in'){ $darkskydayprecipIntensity=number_format($cond['precipIntensity'],2);} 
+else $darkskydayprecipIntensity = number_format($cond['precipIntensity']*25.4,1);
+if ($rainunit=='in'){$darkskydayacumm=round($cond['precipAccumulation']*0.393701,1);}
+else {$darkskydayacumm=round($cond['precipAccumulation'],1);}
+//convert all the scenarios
+if ($weather["temp_units"]=='C' && $darkskyunit=='us'){ $darkskydayTempHigh = round($cond['temperatureMax']-32)*5/9;}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='si'){ $darkskydayTempHigh = round(32 +(9*$cond['temperatureMax']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='uk2'){ $darkskydayTempHigh = round(32 +(9*$cond['temperatureMax']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='ca'){ $darkskydayTempHigh = round(32 +(9*$cond['temperatureMax']/5));}
+else $darkskydayTempHigh = round($cond['temperatureMax']);
+if ($weather["temp_units"]=='C' && $darkskyunit=='us'){ $darkskydayTempLow = round($cond['temperatureMin']-32)*5/9;}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='si'){ $darkskydayTempLow = round(32 +(9*$cond['temperatureMin']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='uk2'){ $darkskydayTempLow = round(32 +(9*$cond['temperatureMin']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='ca'){ $darkskydayTempLow = round(32 +(9*$cond['temperatureMin']/5));}
+else $darkskydayTempLow = round($cond['temperatureMin']);
+
+
+   //si wind is m/s
 if ($weather["wind_units"] == 'mph' && $darkskyunit=='si') {$windspeedconversion =2.23694;} 
 else if ($weather["wind_units"] == 'km/h' && $darkskyunit=='si') {$windspeedconversion = 3.6000059687997;} 
 else if ($weather["wind_units"] == 'm/s' && $darkskyunit=='si') {$windspeedconversion = 1;}

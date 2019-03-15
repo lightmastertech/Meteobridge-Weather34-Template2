@@ -17,10 +17,17 @@
 foreach ($darkskydayCond as $cond) {
 $darkskydayTime = $cond['time'];$darkskydaySummary = $cond['summary'];$darkskydayIcon = $cond['icon'];
 
-if ($weather["temp_units"]=='F'){ $darkskydayTempHigh = round(32 +(9*$cond['temperatureMax']/5));}
+if ($weather["temp_units"]=='C' && $darkskyunit=='us'){ $darkskydayTempHigh = round($cond['temperatureMax']-32)*5/9;}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='si'){ $darkskydayTempHigh = round(32 +(9*$cond['temperatureMax']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='uk2'){ $darkskydayTempHigh = round(32 +(9*$cond['temperatureMax']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='ca'){ $darkskydayTempHigh = round(32 +(9*$cond['temperatureMax']/5));}
 else $darkskydayTempHigh = round($cond['temperatureMax']);
-if ($weather["temp_units"]=='F'){ $darkskydayTempLow = round(32 +(9*$cond['temperatureMin']/5));}
+if ($weather["temp_units"]=='C' && $darkskyunit=='us'){ $darkskydayTempLow = round($cond['temperatureMin']-32)*5/9;}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='si'){ $darkskydayTempLow = round(32 +(9*$cond['temperatureMin']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='uk2'){ $darkskydayTempLow = round(32 +(9*$cond['temperatureMin']/5));}
+else if ($weather["temp_units"]=='F' && $darkskyunit=='ca'){ $darkskydayTempLow = round(32 +(9*$cond['temperatureMin']/5));}
 else $darkskydayTempLow = round($cond['temperatureMin']);
+
 
 
 $darkskydayWinddir = $cond['windBearing'];$darkskydayClouds = $cond['cloudCover']*100;$darkskydayHumidity = $cond['humidity']*100;$darkskydayUV = $cond['uvIndex'];$darkskydayPrecipProb = $cond['precipProbability']*100;
@@ -60,7 +67,7 @@ if($tempunit=='F' && $darkskydayTempHigh<44.6){echo '<darkskytemphihome><bluetds
 else if($tempunit=='F' && $darkskydayTempHigh>104){echo '<darkskytemphihome><purpletds>'.number_format($darkskydayTempHigh,0).'°</purpletds></darkskytemphihome>';}
 else if($tempunit=='F' && $darkskydayTempHigh>80.6){echo '<darkskytemphihome><redtds>'.number_format($darkskydayTempHigh,0).'°</redtds></darkskytemphihome>';}
 else if($tempunit=='F' && $darkskydayTempHigh>64){echo '<darkskytemphihome><orangetds>'.number_format($darkskydayTempHigh,0).'°</orangetds></darkskytemphihome>';}
-else if($tempunit=='F' && $darkskydayTempHigh>55){echo '<darkskytemphihome><yellowtsd>'.number_format($darkskydayTempHigh,0).'°</yellowtds></darkskytemphihome>';}
+else if($tempunit=='F' && $darkskydayTempHigh>55){echo '<darkskytemphihome><yellowtds>'.number_format($darkskydayTempHigh,0).'°</yellowtds></darkskytemphihome>';}
 else if($tempunit=='F' && $darkskydayTempHigh>=44.6){echo '<darkskytemphihome><greentds>'.number_format($darkskydayTempHigh,0).'°</greentds></darkskytemphihome>';}
 //temp metric
 else if($darkskydayTempHigh<7){echo '<darkskytemphihome><bluetds>'.number_format($darkskydayTempHigh,0).'°</bluet></darkskytemphihome>';}
