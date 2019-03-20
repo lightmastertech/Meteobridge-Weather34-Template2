@@ -127,7 +127,7 @@ h6 {
 .weatherfooter-item,
 h1 {
   text-rendering: optimizeLegibility;
-  color-adjust: exact]
+  color-adjust: exact
 }
 
 .bt,
@@ -2469,10 +2469,6 @@ lightningrain {
   font-weight: 600
 }
 
-.sunlightday {
-  font: .6rem arial, system
-}
-
 .clockiconsvg {
   color: #2d2d2d;
   position: relative;
@@ -2565,7 +2561,7 @@ rainblue {
 .rainblue1 {
   color: #07727d;
   font-size: 10px;
-  bototm: 5px
+  bottom: 5px
 }
 
 .windgrey1 {
@@ -3573,12 +3569,6 @@ tsteady {
   margin-left: 5px
 }
 
-.sunlightday,
-.sunriseday {
-  text-align: center;
-  left: -15px
-}
-
 .weather34menulistings a:hover {
   color: #90b12a
 }
@@ -3672,7 +3662,6 @@ tsteady {
 
 .daylightvalue1 dayperiod,
 .sundarkday,
-.sunlightday,
 .sunriseday,
 .sunsetday {
   width: 100px;
@@ -3707,42 +3696,6 @@ tsteady {
 .daylightvalue1 hours,
 minutes {
   color: #565f67
-}
-
-.sunriseday,
-.sunsetday {
-  color: #2d2d2d
-}
-
-.sunlightday {
-  line-height: 9px;
-  margin-top: 0
-}
-
-.sundarkday,
-.sunriseday {
-  font: .6rem arial, system
-}
-
-.sunriseday {
-  margin-top: 120px;
-  line-height: 9px;
-  margin-left: 7px
-}
-
-.sundarkday {
-  margin-left: 215px;
-  text-align: center;
-  line-height: 9px;
-  margin-top: 0
-}
-
-.sunsetday {
-  margin-left: 210px;
-  text-align: center;
-  margin-top: 120px;
-  font: .6rem arial, system;
-  line-height: 9px
 }
 
 .daylightcompass2 {
@@ -5633,7 +5586,7 @@ img.menuimg {
 .elevationword {
   font-size: .6rem;
   position: absolute;
-  color: #2d3a4b)
+  color: #2d3a4b
 }
 
 .sundialcontainerdiv2 {
@@ -5660,41 +5613,6 @@ img.menuimg {
   background: 0;
   image-rendering: high-quality;
   height: 10em
-}
-
-.luminancem,
-.moonphasem {
-  font-size: .58rem;
-  line-height: 14px;
-  position: absolute;
-  margin-top: -50px;
-  color: #2d3a4b
-}
-
-.moonphasem {
-  left: -85px
-}
-
-.luminancem {
-  left: 115px
-}
-
-.luminancem span,
-.moonphasem span {
-  display: block;
-  font-size: .58rem;
-  width: 100px;
-  color: #2d3a4b
-}
-
-.moonphasem span {
-  left: 0;
-  line-height: 16px
-}
-
-.luminancem span {
-  left: 5px;
-  line-height: 16px
 }
 
 .sunelevation {
@@ -6307,7 +6225,6 @@ darkskytemplohome thunder {
 }
 
 .darkskyiconcurrent {
-  postion: relative;
   position: relative;
   margin-top: 10px;
   margin-bottom: -5px;
@@ -8319,4 +8236,186 @@ purpletds {
 
 blueu {
   color: #07727d
+}
+
+.weather34sunlightday {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 2.1rem;
+  width: 6.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  margin-left: -15px;
+  margin-top: 1px
+}
+
+.weather34sundarkday {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 2.1rem;
+  width: 6.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  margin-left: 215px;
+  margin-top: 1px
+}
+
+.weather34sunriseday {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 5.1rem;
+  width: 10.4em;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  margin-top: 125px;
+  margin-left: -5px
+}
+
+.weather34sunriseday:after {
+  content: "";
+  font-size: 0;
+  position: absolute;
+  height: 4px;
+  width: 8px;
+  border-radius: 10px 10px 0 0;
+  background: #ff7c39;
+  margin-left: 3px
+}
+
+.weather34sunsetday {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 5.1rem;
+  width: 10.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  margin-left: 177px;
+  margin-top: 125px
+}
+
+.weather34sunsetday:after {
+  content: "";
+  font-size: 0;
+  position: absolute;
+  height: 4px;
+  width: 8px;
+  border-radius: 0 0 10px 10px;
+  background: #d35d4e;
+  margin-left: 3px
+}
+
+.weather34moonphasem {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 4.1rem;
+  width: 7.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  left: -15px;
+  margin-top: 50px
+}
+
+.weather34moonphasemhome {
+  position: absolute;
+  align-items: left;
+  justify-content: center;
+  height: 4.1rem;
+  width: 7.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  left: -110px;
+  margin-top: 50px
+}
+
+.weather34luminancem {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 4.1rem;
+  width: 7.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  ;
+  margin-top: 50px;
+  left: 207px
+}
+
+.weather34lumhome {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 4.1rem;
+  width: 7.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .6em;
+  margin-top: 47px;
+  left: 100px
+}
+
+.weather34sunupcircle {
+  top: 1px;
+  position: relative;
+  height: 4px;
+  width: 8px;
+  border-radius: 10px 10px 0 0;
+  background: #ff7c39;
+  display: inline
+}
+
+.weather34sundowncircle {
+  top: 2px;
+  position: relative;
+  height: 4px;
+  width: 8px;
+  border-radius: 0 0 10px 10px;
+  background: #d35d4e
+}
+
+weather34daylightdaycircle {
+  top: 2px;
+  left: 25px;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 45px;
+  background: #00a4b4
+}
+
+weather34darkdaycircle {
+  top: 2px;
+  left: 71px;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 45px;
+  background: #565f67
 }
