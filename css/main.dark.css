@@ -8123,25 +8123,14 @@ blueu {
   align-items: center;
   justify-content: center;
   height: 5.1rem;
-  width: 10.4em;
+  width: 8.2rem;
   overflow: hidden;
   color: #c0c0c0;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
-  margin-top: 120px;
-  margin-left: -5px
-}
-
-.weather34sunriseday:after {
-  content: "";
-  font-size: 0;
-  position: absolute;
-  height: 4px;
-  width: 8px;
-  border-radius: 10px 10px 0 0;
-  background: #ff7c39;
-  margin-left: 3px
+  margin-top: 118px;
+  margin-left: -25px
 }
 
 .weather34sunsetday {
@@ -8149,25 +8138,14 @@ blueu {
   align-items: center;
   justify-content: center;
   height: 5.1rem;
-  width: 10.4rem;
+  width: 8.2rem;
   overflow: hidden;
   color: #c0c0c0;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
-  margin-left: 177px;
-  margin-top: 120px
-}
-
-.weather34sunsetday:after {
-  content: "";
-  font-size: 0;
-  position: absolute;
-  height: 4px;
-  width: 8px;
-  border-radius: 0 0 10px 10px;
-  background: #d35d4e;
-  margin-left: 3px
+  margin-left: 200px;
+  margin-top: 118px
 }
 
 .weather34moonphasem {
@@ -8185,37 +8163,7 @@ blueu {
   margin-top: 45px
 }
 
-.weather34moonphasemhome {
-  position: absolute;
-  align-items: left;
-  justify-content: center;
-  height: 4.1rem;
-  width: 7.4rem;
-  overflow: hidden;
-  color: #c0c0c0;
-  line-height: 8px;
-  font-family: weathertext2;
-  font-size: .6em;
-  left: -110px;
-  margin-top: 50px
-}
-
 .weather34luminancem {
-  position: absolute;
-  align-items: left;
-  justify-content: center;
-  height: 4.1rem;
-  width: 7.4rem;
-  overflow: hidden;
-  color: #c0c0c0;
-  line-height: 8px;
-  font-family: weathertext2;
-  font-size: .6em;
-  margin-top: 45px;
-  left: 207px
-}
-
-.weather34lumhome {
   position: absolute;
   align-items: center;
   justify-content: center;
@@ -8226,23 +8174,25 @@ blueu {
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
-  margin-top: 48px;
-  left: 100px
+  ;
+  margin-top: 45px;
+  left: 210px
 }
 
-.weather34sunupcircle {
+weather34sunupcircle {
   top: 1px;
-  position: relative;
+  left: 38px;
+  position: absolute;
   height: 4px;
   width: 8px;
   border-radius: 10px 10px 0 0;
-  background: #ff7c39;
-  display: inline
+  background: #ff7c39
 }
 
-.weather34sundowncircle {
+weather34sundowncircle {
   top: 2px;
-  position: relative;
+  left: 83px;
+  position: absolute;
   height: 4px;
   width: 8px;
   border-radius: 0 0 10px 10px;
