@@ -12,6 +12,22 @@ all icons are produced and made by weather34 in svg format .
  
 </p>
 
+# Thanks to the following sites which I have monitored for anomalies this helps due to different scenarios and hardware which is not always obvious when changes happen.ps my brain is stuck in metric :-)
+
+Singapore Weather
+
+Bath(UK) Weather
+
+Myrtle Beach WX
+
+Milehighweather
+
+Okawville WX
+
+Baxley, GA Weather Station
+
+Toulouse Meteo
+
 
 # Alternative versions 
 you may also find the Cumulus version maintained by Ken True (Saratoga) at https://github.com/ktrue/CU-HWS

@@ -7098,7 +7098,7 @@ wfstriketoday {
 .moonphasemoduleposition {
   position: relative;
   left: 100px;
-  margin-top: 18px;
+  margin-top: 3px;
   font-family: weathertext2
 }
 
@@ -7245,23 +7245,23 @@ wfstriketoday {
 }
 
 .moonrise1 {
-  margin-top: 0;
-  margin-left: -95px
+  top: 0;
+  margin-left: -105px
 }
 
 .moonrise1 span {
-  color: rgba(255, 112, 50, 1);
+  color: #2d3a4b;
   margin-left: 25px
 }
 
 .moonset1 {
-  margin-top: 100px;
-  margin-left: -95px;
+  margin-top: 120px;
+  margin-left: -105px;
   color: #2d3a4b
 }
 
 .moonset1 span {
-  color: #00adbc;
+  color: #2d3a4b;
   margin-left: 15px
 }
 
@@ -7273,11 +7273,11 @@ wfstriketoday {
 }
 
 .fullmoon1 {
-  margin-top: 0;
-  margin-left: 120px;
+  top: 0;
+  margin-left: 115px;
   font-size: .55rem;
   width: 100px;
-  font-family:weathertext2
+  font-family: weathertext2
 }
 
 .meteorshower,
@@ -7291,8 +7291,8 @@ wfstriketoday {
 }
 
 .newmoon1 {
-  margin-top: 100px;
-  margin-left: 105px
+  margin-top: 120px;
+  margin-left: 110px
 }
 
 .newmoon1 span {
@@ -7300,7 +7300,7 @@ wfstriketoday {
 }
 
 .meteorshower {
-  margin: 110px auto 110px -5px
+  margin: 130px auto 110px -5px
 }
 
 .luminance1 {
@@ -8329,6 +8329,37 @@ blueu {
   left: 210px
 }
 
+.weather34moonphasem2 {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 4.1rem;
+  width: 7.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .65em;
+  left: -110px;
+  margin-top: 65px
+}
+
+.weather34luminancem2 {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 4.1rem;
+  width: 7.4rem;
+  overflow: hidden;
+  color: #2d3a4b;
+  line-height: 8px;
+  font-family: weathertext2;
+  font-size: .65em;
+  ;
+  margin-top: 65px;
+  left: 100px
+}
+
 weather34sunupcircle {
   top: 1px;
   left: 38px;
@@ -8367,4 +8398,20 @@ weather34darkdaycircle {
   width: 5px;
   border-radius: 45px;
   background: #565f67
+}
+
+.weather34moonmodule {
+  margin-left: 35px;
+  margin-top: 45px;
+}
+
+.weather34moonmodule svg {
+  width: auto;
+  color: rgba(230, 232, 239, 1.000)
+}
+
+.weather34moonmodulepos {
+  position: absolute;
+  top: -20px;
+  left: 75px
 }
