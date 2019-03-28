@@ -15,7 +15,7 @@ img {
 @font-face {
   font-family: system;
   font-style: normal;
-  src: local(".SFNSText-Light"), local("Arial")
+  src: local("Arial")
 }
 
 .menu,
@@ -238,8 +238,8 @@ header {
   -o-box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
   -ms-box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
   box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
-  height: 3.8em;
-  top: 0;
+  height: 3.3em;
+  top: -5px;
   width: 100%;
   z-index: 4;
   margin-bottom: -10px
@@ -338,58 +338,6 @@ h6 {
   font-weight: 500
 }
 
-.weather-container,
-.weather-item,
-a,
-body {
-  text-transform: none;
-  font-family: system
-}
-
-.weather-item,
-.weather2-alert.weatherfooter-item,
-.weather2-item {
-  -moz-font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased
-}
-
-.weather2-alert.weatherfooter-item,
-.weather2-item {
-  font-family: Arial, system
-}
-
-.weather-item,
-.weather2-item,
-body {
-  -ms-text-size-adjust: 100%;
-  font-smoothing: antialiased
-}
-
-.weather-item,
-.weather2-item {
-  color: silver;
-  box-shadow: 0;
-  max-height: 360px
-}
-
-.weather-container,
-.weather-item,
-.weather2-container,
-.weather2-item {
-  font-family: arial, system
-}
-
-.featherlight:before,
-img,
-wm2 {
-  vertical-align: middle
-}
-
-.sr-only,
-svg:not(:root) {
-  overflow: hidden
-}
-
 .weather-container {
   display: flex;
   list-style: none;
@@ -422,14 +370,6 @@ svg:not(:root) {
   float: left
 }
 
-.chartforecast,
-.monthpopup,
-.todaypopup,
-.weather34box .title,
-.yearpopup {
-  text-transform: uppercase
-}
-
 .weather2-container {
   -ms-text-size-adjust: 100%;
   -moz-font-smoothing: antialiased;
@@ -438,7 +378,7 @@ svg:not(:root) {
   display: flex;
   width: 960px;
   height: 100px;
-  margin: 66px auto -20px;
+  margin: 50px auto -20px;
   background: 0
 }
 
@@ -451,6 +391,26 @@ svg:not(:root) {
   display: none
 }
 
+.weather2-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  width: 960px;
+  height: 100px;
+  background-color: 0;
+  margin: 50px auto -20px
+}
+
+.weather2-item {
+  width: 33.3333%;
+  margin: 0 2px 2px 0;
+  font-smoothing: antialiased;
+  background-color: #fff;
+  border: 0 solid #e9ebf1;
+  float: left;
+  font-size: .9em
+}
+
 .weather2-alert,
 .weather2-clock,
 .weatherfooter-item {
@@ -461,12 +421,6 @@ svg:not(:root) {
 .weatherfooter-container,
 .weatherfooter-item {
   font-family: Arial, system
-}
-
-.alerttopicons img {
-  width: 20px;
-  margin-top: 38px;
-  opacity: .8
 }
 
 .alerttopicons svg {
@@ -2464,15 +2418,15 @@ oredh1 {
 ogreyh1 {
   color: #bbb;
   background: rgba(86, 95, 103, .4);
-  padding: 5px;
+  padding: 3px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  font-size: .9em
+  font-size: .8em
 }
 
 ogrey {
   color: #bbb;
-  font-size: 1.1em
+  font-size: 1em
 }
 
 adv,
@@ -2525,7 +2479,7 @@ dayi {
 .w34logo {
   float: right;
   margin-right: 20px;
-  margin-top: -27px
+  margin-top: -30px
 }
 
 .menucolor a {
@@ -2536,7 +2490,7 @@ dayi {
   overflow: hidden;
   line-height: 16px;
   font-family: weathertext2;
-  color: #c0c0c0;
+  color: silver;
   justify-content: center;
   font-size: .85em;
   border: 1px solid #393d40;
@@ -4173,7 +4127,7 @@ lightningannual {
   float: right;
   margin-right: 130px;
   margin-top: -30px;
-  color: #c0c0c0;
+  color: silver;
   font-size: 11px;
   background: rgba(86, 95, 103, .4);
   padding: 3px;
@@ -4764,25 +4718,45 @@ chartinfocolor {
   position: relative;
   min-height: 80px;
   max-height: 180px;
-  border-radius: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   margin-bottom: 8px;
   overflow: hidden;
-  background: rgba(97, 106, 114, 1)
+  background: #616a72
 }
 
 .weather34lightningdialog-box .header {
-  height: 30px;
+  height: 25px;
   position: relative;
-  color: silver;
-  background: rgba(97, 106, 114, 1);
-  line-height: 22px
+  color: #fff;
+  background: rgba(86, 95, 103, 1);
+  line-height: 22px;
+  border-radius: 5px;
+  font-size: 12px
 }
 
 .weather34lightningbackground-alert {
   height: 100%;
   width: 100%;
-  background-color: rgba(61, 64, 66, 1);
+  background-color: rgba(61, 64, 66, 0);
   position: absolute
+}
+
+.weather34lightningcontents {
+  z-index: 100;
+  position: inherit;
+  font-size: 12px;
+  text-align: center
+}
+
+.weather34lightningmain-content {
+  padding: 8px 20px 10px 10px;
+  height: content-max;
+  background: rgba(97, 106, 114, 1);
+  color: #fff;
+  line-height: 16px;
+  text-align: center;
+  font-size: .9em
 }
 
 .left,
@@ -4800,23 +4774,6 @@ chartinfocolor {
   float: right;
   text-align: right;
   padding: 3px 10px 0 0
-}
-
-.weather34lightningcontents {
-  z-index: 100;
-  position: inherit;
-  font-size: 1em;
-  text-align: center
-}
-
-.weather34lightningmain-content {
-  padding: 8px 20px 10px 10px;
-  height: content-max;
-  background: rgba(97, 106, 114, 1);
-  color: #fff;
-  line-height: 16px;
-  text-align: center;
-  font-size: .9em
 }
 
 .daylightvalue1 {
@@ -7229,7 +7186,7 @@ wfstriketoday {
 }
 
 .moonrise1 span {
-  color: #c0c0c0;
+  color: silver;
   margin-left: 25px
 }
 
@@ -7240,7 +7197,7 @@ wfstriketoday {
 }
 
 .moonset1 span {
-  color: #c0c0c0;
+  color: silver;
   margin-left: 15px
 }
 
@@ -7982,19 +7939,19 @@ purpleu {
 }
 
 bluet {
-  color: #01a4b5;
+  color: #01a4b5
 }
 
 yellowt {
-  color: #e6a141;
+  color: #e6a141
 }
 
 oranget {
-  color: #d05f2d;
+  color: #d05f2d
 }
 
 greent {
-  color: #90b12a;
+  color: #90b12a
 }
 
 redt {
@@ -8117,7 +8074,7 @@ blueu {
   height: 2.1rem;
   width: 6.4rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
@@ -8132,7 +8089,7 @@ blueu {
   height: 2.1rem;
   width: 6.4rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
@@ -8147,7 +8104,7 @@ blueu {
   height: 5.1rem;
   width: 8.2rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
@@ -8162,7 +8119,7 @@ blueu {
   height: 5.1rem;
   width: 8.2rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
@@ -8177,7 +8134,7 @@ blueu {
   height: 4.1rem;
   width: 7.4rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
@@ -8192,11 +8149,10 @@ blueu {
   height: 4.1rem;
   width: 7.4rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .6em;
-  ;
   margin-top: 45px;
   left: 210px
 }
@@ -8208,7 +8164,7 @@ blueu {
   height: 4.1rem;
   width: 7.4rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .65em;
@@ -8223,11 +8179,10 @@ blueu {
   height: 4.1rem;
   width: 7.4rem;
   overflow: hidden;
-  color: #c0c0c0;
+  color: silver;
   line-height: 8px;
   font-family: weathertext2;
   font-size: .65em;
-  ;
   margin-top: 65px;
   left: 100px
 }
@@ -8279,11 +8234,41 @@ weather34darkdaycircle {
 
 .weather34moonmodule svg {
   width: auto;
-  color: rgba(230, 232, 239, 0.7)
+  color: rgba(230, 232, 239, .7)
 }
 
 .weather34moonmodulepos {
   position: absolute;
   top: -20px;
   left: 75px
+}
+
+topbarimperial,
+topbarmetric {
+  display: flex;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  width: 1.7em;
+  height: 1.7em;
+  padding: 1px;
+  background: 0;
+  font-weight: 500;
+  font-family: weathertext2;
+  font-size: 0.9em;
+  align-items: center;
+  justify-content: center
+}
+
+topbarimperial {
+  border: 1px solid #ff7c39;
+  color: #ff7c39
+}
+
+topbarmetric {
+  border: 1px solid #009bab;
+  color: #009bab
+}
+
+.title {
+  text-transform: uppercase
 }
