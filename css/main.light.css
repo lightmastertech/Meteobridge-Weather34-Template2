@@ -132,7 +132,7 @@ h6 {
 .weatherfooter-item,
 h1 {
   text-rendering: optimizeLegibility;
-  color-adjust: exact
+  color-adjust: [exact]
 }
 
 .bt,
@@ -1403,8 +1403,6 @@ indoorless20 {
   position: absolute;
   color: #d86858;
   font: 600 10px arial, system;
-  -o-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased
 }
 
 .averagedir span,
@@ -1412,8 +1410,6 @@ indoorless20 {
   margin-bottom: 0;
   color: #2d2d2d;
   font-weight: 600;
-  -o-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
   font-family: arial, system
 }
 
@@ -2035,8 +2031,6 @@ a:hover {
 }
 
 .gustspeedtrend1 span {
-  -o-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
   line-height: 9px
 }
 
@@ -2052,10 +2046,7 @@ a:hover {
 }
 
 .avgspeedwind1 span,
-.windspeedtrend1 span {
-  -o-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased
-}
+.windspeedtrend1 span {}
 
 .windspeedtrend1 span {
   line-height: 9px
@@ -2117,7 +2108,6 @@ a:hover {
     background-color: 0;
     text-rendering: optimizeLegibility;
     -o-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
     font-family: arial, system;
     overflow: hidden
   }
@@ -5160,7 +5150,7 @@ smallsup {
 .tempcontainer,
 .uvcontainer1 {
   -o-font-smoothing: antialiased;
-  left:0;
+  left: 0;
   bottom: 0;
   right: 0;
   float: left
@@ -7857,8 +7847,6 @@ updatedtime {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased
 }
 
 .homeweatherstationlogo {
