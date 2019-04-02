@@ -8449,3 +8449,335 @@ topbarmetric {
   font-size: 10px;
   margin-bottom: -15px
 }
+
+.wulargediv,
+.wulargeforecasthome,
+.wulargeforecastinghome {
+  font-family: weathertext2;
+  color: #2d3a4b
+}
+
+.wulargeforecasthome {
+  position: absolute;
+  width: 308px;
+  background: 0;
+  margin: 0 auto 0 10px;
+  font-size: .65rem;
+  display: block;
+  border-radius: 3px;
+  overflow: hidden
+}
+
+.wulargediv,
+.wulargeforecastinghome {
+  overflow: hidden
+}
+
+.wulargeforecasthome wulargetemphihome,
+.wulargeforecasthome wulargetempwindhome span,
+.wulargeforecasthome wulargetempwindhome span2,
+.wulargeweekdayhome {
+  font-family: weathertext2;
+  font-size: .65rem;
+  color: #2d3a4b
+}
+
+.wulargediv {
+  width: 310px;
+  height: 180px;
+  margin-top: 3px
+}
+
+.wulargeforecastinghome {
+  float: left;
+  display: inline;
+  width: 290px;
+  border-radius: 2px;
+  margin: 0 0 100px 1%;
+  height: 142px;
+  padding: 0;
+  background: 0;
+  border: 1px solid rgba(153, 155, 156, .1);
+  color: #2d3a4b
+}
+
+.wuhumidity,
+.wurainfall {
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px
+}
+
+.wulargeweekdayhome {
+  position: absolutue;
+  text-align: left;
+  padding: 1px;
+  color: #2d3a4b;
+  margin: 0 0 0 5px;
+  background: 0
+}
+
+.wuhumidity,
+.wuthunder {
+  padding-top: 0;
+  align-items: center;
+  font-family: weathertext2
+}
+
+.wulargeforecasthome wulargetemphihome,
+.wulargeforecasthome wulargetemplohome {
+  margin-top: 0;
+  margin-left: 1%;
+  font-weight: 500
+}
+
+.wulargeforecasthome wulargetemphihome span {
+  font-size: .7rem;
+  color: #ff7c39
+}
+
+.wulargeforecasthome wulargetemphihome {
+  font-size: 12px;
+  color: #ff7c39
+}
+
+.wulargeforecasthome wulargetempwindhome,
+.wulargeforecasthome wulargetempwindhome span4 {
+  position: absolute;
+  color: #07727d;
+  font-family: weathertext2;
+  font-size: .7rem;
+  float: left
+}
+
+wulargetemplohome uv {
+  font-weight: 500
+}
+
+wulargeforecasthome wulargetemplohome,
+wulargetemplohome {
+  font-size: .7rem;
+  font-weight: 500
+}
+
+wulargetemplohome uvspan {
+  font-weight: 400
+}
+
+.wuthunder {
+  position: absolute;
+  width: 8.5rem;
+  height: 1rem;
+  font-size: 10px;
+  color: #2d3a4b;
+  display: flex;
+  justify-content: center;
+  margin-left: 60px;
+  margin-top: 7px
+}
+
+.wulargerain,
+.wulargewindspeedicon {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute
+}
+
+.wulargewindspeedicon,
+wulargetempdesc {
+  margin-top: 5px;
+  font-size: 11px;
+  float: left
+}
+
+.wulargehomeicons {
+  margin-bottom: -5px;
+  float: left;
+  margin-left: 10px
+}
+
+.wulargewindspeedicon {
+  margin-left: 10px
+}
+
+.wulargerain {
+  float: left;
+  margin-left: 10px;
+  margin-top: 30px;
+  font-size: 11px
+}
+
+.wuhumidity {
+  position: absolute;
+  width: 2.75rem;
+  height: 1.25rem;
+  font-size: .8rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-left: 134px;
+  top: -32px;
+  background: #01a4b5
+}
+
+.wurainfall,
+.wuwindspeed {
+  position: absolute;
+  width: 3.3rem;
+  font-size: .7rem;
+  display: flex
+}
+
+.wurainfall,
+.wuwindspeed,
+bluewu,
+greenwu,
+orangewu,
+purplewu,
+redwu,
+yellowwu {
+  -webkit-border-radius: 2px;
+  padding-top: 0;
+  color: #fff
+}
+
+.wurainfall {
+  font-family: weathertext2;
+  height: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  margin-left: 120px;
+  top: 0;
+  background: #01a4b5
+}
+
+.wuwindspeed,
+bluewu,
+greenwu,
+orangewu,
+purplewu,
+redwu,
+yellowwu {
+  align-items: center;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px
+}
+
+.wuwindspeed {
+  font-family: weathertext2;
+  height: 1rem;
+  justify-content: center;
+  border-radius: 2px;
+  margin-left: 120px;
+  top: 2px;
+  background: #d05f2d
+}
+
+.wulargeuvindex,
+wuhumidityword {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute
+}
+
+wuhumidityword {
+  font-size: 9px;
+  margin-left: 0;
+  top: 20px;
+  color: #2d3a4b
+}
+
+.wulargeuvindex {
+  font-size: .7rem;
+  float: left;
+  margin-top: 6px
+}
+
+.wulargeuvindex wuinfo {
+  position: absolute;
+  display: inline;
+  left: 70px;
+  width: 6em
+}
+
+bluewu,
+greenwu,
+orangewu,
+purplewu,
+redwu,
+yellowwu {
+  position: absolute;
+  font-family: weathertext2;
+  width: 2.75rem;
+  height: 1.25rem;
+  font-size: .9rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  margin-left: 220px;
+  top: 23px
+}
+
+bluewu,
+bluewuv {
+  background: #01a4b5
+}
+
+yellowwu,
+yellowwuv {
+  background: #e6a141
+}
+
+orangewu,
+orangewuv {
+  background: #d05f2d
+}
+
+greenwu,
+greenwuv {
+  background: #90b12a
+}
+
+redwu,
+redwuv {
+  background: #d86858
+}
+
+purplewu,
+purplewuv {
+  background: #de7b6e
+}
+
+bluewuv,
+greenwuv,
+greywuv,
+orangewuv,
+purplewuv,
+redwuv,
+yellowwuv {
+  position: absolute;
+  font-family: weathertext2;
+  width: 1.5rem;
+  height: 1rem;
+  font-size: .9em;
+  padding-top: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  margin-left: 48px;
+  top: -1px
+}
+
+greywuv {
+  background: #565f67
+}
+
+wuunits {
+  font-size: .65em
+}
