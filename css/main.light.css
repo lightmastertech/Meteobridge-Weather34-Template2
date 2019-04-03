@@ -8501,12 +8501,6 @@ topbarmetric {
   color: #2d3a4b
 }
 
-.wuhumidity,
-.wurainfall {
-  -moz-border-radius: 2px;
-  -o-border-radius: 2px
-}
-
 .wulargeweekdayhome {
   position: absolutue;
   text-align: left;
@@ -8519,7 +8513,6 @@ topbarmetric {
 .wuhumidity,
 .wuthunder {
   padding-top: 0;
-  align-items: center;
   font-family: weathertext2
 }
 
@@ -8570,9 +8563,10 @@ wulargetemplohome uvspan {
   font-size: 10px;
   color: #2d3a4b;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-left: 60px;
-  margin-top: 7px
+  margin-left: 140px;
+  margin-top: 27px
 }
 
 .wulargerain,
@@ -8585,8 +8579,8 @@ wulargetemplohome uvspan {
 .wulargewindspeedicon,
 wulargetempdesc {
   margin-top: 5px;
-  font-size: 11px;
-  float: left
+  float: left;
+  font-size: 11px
 }
 
 .wulargehomeicons {
@@ -8606,15 +8600,24 @@ wulargetempdesc {
   font-size: 11px
 }
 
+.wuhumidity,
+.wurainfall,
+.wuwindspeed,
+heatindexwu {
+  color: #fff;
+  display: flex
+}
+
 .wuhumidity {
   position: absolute;
   width: 2.75rem;
   height: 1.25rem;
   font-size: .8rem;
-  color: #fff;
-  display: flex;
+  align-items: center;
   justify-content: center;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
   margin-left: 134px;
   top: -32px;
@@ -8623,74 +8626,73 @@ wulargetempdesc {
 
 .wurainfall,
 .wuwindspeed {
-  position: absolute;
-  width: 3.3rem;
-  font-size: .7rem;
-  display: flex
-}
-
-.wurainfall,
-.wuwindspeed,
-bluewu,
-greenwu,
-orangewu,
-purplewu,
-redwu,
-yellowwu {
-  -webkit-border-radius: 2px;
+  margin-left: 120px;
   padding-top: 0;
-  color: #fff
+  align-items: center;
+  -webkit-border-radius: 2px
 }
 
 .wurainfall {
+  position: absolute;
   font-family: weathertext2;
+  width: 3.3rem;
   height: 1rem;
-  align-items: center;
+  font-size: .7rem;
   justify-content: center;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px;
-  margin-left: 120px;
   top: 0;
   background: #01a4b5
 }
 
 .wuwindspeed,
-bluewu,
-greenwu,
-orangewu,
-purplewu,
-redwu,
-yellowwu {
-  align-items: center;
+heatindexwu {
   -moz-border-radius: 2px;
   -o-border-radius: 2px
 }
 
-.wuwindspeed {
-  font-family: weathertext2;
-  height: 1rem;
-  justify-content: center;
-  border-radius: 2px;
-  margin-left: 120px;
-  top: 2px;
+.wuwindspeed,
+orangewu,
+orangewuv {
   background: #d05f2d
 }
 
-.wulargeuvindex,
-wuhumidityword {
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute
+.wuwindspeed {
+  position: absolute;
+  font-family: weathertext2;
+  width: 3.3rem;
+  height: 1rem;
+  font-size: .7rem;
+  justify-content: center;
+  border-radius: 2px;
+  top: 2px
+}
+
+heatindexwu,
+redwu,
+redwuv {
+  background: #d86858
 }
 
 wuhumidityword {
   font-size: 9px;
+  position: absolute;
   margin-left: 0;
   top: 20px;
-  color: #2d3a4b
+  color: #2d3a4b;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.wulargeheatindex,
+.wulargeuvindex {
+  font-size: .7rem;
+  float: none;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute
 }
 
 .wulargeuvindex {
-  font-size: .7rem;
-  float: left;
   margin-top: 6px
 }
 
@@ -8701,18 +8703,69 @@ wuhumidityword {
   width: 6em
 }
 
+.wulargeheatindex {
+  margin-top: 27px
+}
+
+.wulargeheatindex wuinfo {
+  position: absolute;
+  display: inline;
+  left: 5px;
+  width: 6em
+}
+
+heatindexwu,
+windchillwu {
+  width: 2.35rem;
+  font-size: .9em;
+  margin-left: 70px;
+  top: 0;
+  height: .9rem
+}
+
+heatindexwu {
+  position: absolute;
+  font-family: weathertext2;
+  padding-top: 0;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 2px;
+  border-radius: 2px
+}
+
+bluewu,
+greenwu,
+orangewu,
+purplewu,
+redwu,
+windchillwu,
+yellowwu {
+  align-items: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  position: absolute;
+  font-family: weathertext2;
+  padding-top: 0;
+  color: #fff;
+  display: flex
+}
+
+windchillwu {
+  justify-content: center;
+  border-radius: 2px;
+  background: #009bab
+}
+
 bluewu,
 greenwu,
 orangewu,
 purplewu,
 redwu,
 yellowwu {
-  position: absolute;
-  font-family: weathertext2;
   width: 2.75rem;
-  height: 1.25rem;
-  font-size: .9rem;
-  display: flex;
+  height: 1.1rem;
+  font-size: 13px;
   justify-content: center;
   border-radius: 2px;
   margin-left: 220px;
@@ -8729,19 +8782,9 @@ yellowwuv {
   background: #e6a141
 }
 
-orangewu,
-orangewuv {
-  background: #d05f2d
-}
-
 greenwu,
 greenwuv {
   background: #90b12a
-}
-
-redwu,
-redwuv {
-  background: #d86858
 }
 
 purplewu,
@@ -8759,7 +8802,7 @@ yellowwuv {
   position: absolute;
   font-family: weathertext2;
   width: 1.5rem;
-  height: 1rem;
+  height: .9rem;
   font-size: .9em;
   padding-top: 0;
   color: #fff;
@@ -8780,4 +8823,8 @@ greywuv {
 
 wuunits {
   font-size: .65em
+}
+
+displaynone {
+  display: none
 }
