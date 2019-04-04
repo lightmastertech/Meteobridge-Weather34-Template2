@@ -8468,8 +8468,9 @@ wuhumidityword {
 .wulargeuvindex wuinfo {
   position: absolute;
   display: inline;
-  left: 70px;
-  width: 6em
+  left: 75px;
+  text-align: left;
+  width: 8rem
 }
 
 .wulargeheatindex {
@@ -8567,7 +8568,7 @@ greenwuv {
 
 purplewu,
 purplewuv {
-  background: #de7b6e
+  background: #c282c5
 }
 
 bluewuv,
