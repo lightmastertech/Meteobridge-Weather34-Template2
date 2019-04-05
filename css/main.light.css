@@ -8693,15 +8693,16 @@ wuhumidityword {
 }
 
 .wulargeuvindex {
-  margin-top: 6px
+  margin-top: 5px
 }
 
 .wulargeuvindex wuinfo {
   position: absolute;
   display: inline;
-  left: 75px;
+  left: 98px;
   text-align: left;
-  width: 8rem
+  width: 8rem;
+  top: 0
 }
 
 .wulargeheatindex {
@@ -8716,7 +8717,12 @@ wuhumidityword {
 }
 
 heatindexwu,
-windchillwu {
+windchillwu,
+feelswu,
+feelswu,
+feelswuyellow,
+feelswuorange,
+feelswugreen {
   width: 2.35rem;
   font-size: .9em;
   margin-left: 70px;
@@ -8724,13 +8730,21 @@ windchillwu {
   height: .9rem
 }
 
-heatindexwu {
+heatindexwu,
+feelswu,
+feelswuyellow,
+feelswuorange,
+feelswugreen {
   position: absolute;
   font-family: weathertext2;
   padding-top: 0;
+  color: #fff;
+  display: flex;
   align-items: center;
   justify-content: center;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
   border-radius: 2px
 }
 
@@ -8778,11 +8792,19 @@ bluewuv {
   background: #01a4b5
 }
 
+feelswuyellow,
 yellowwu,
 yellowwuv {
   background: #e6a141
 }
 
+feelswuorange,
+orangewu,
+orangewuv {
+  background: #d05f2d
+}
+
+feelswugreen,
 greenwu,
 greenwuv {
   background: #90b12a
@@ -8814,8 +8836,8 @@ yellowwuv {
   -moz-border-radius: 2px;
   -o-border-radius: 2px;
   border-radius: 2px;
-  margin-left: 48px;
-  top: -1px
+  margin-left: 70px;
+  top: 0
 }
 
 greywuv {
@@ -8828,4 +8850,40 @@ wuunits {
 
 displaynone {
   display: none
+}
+
+wuuvicon {
+  width: 3.3rem;
+  height: 1.1rem;
+  font-size: 1em;
+  justify-content: center;
+  border-radius: 2px;
+  margin-left: -1px;
+  top: 0;
+  color: #fff;
+  background: #d05f2d;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+wuthunder2 {
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 6.5em;
+  height: 1rem;
+  font-size: 10px;
+  color: #2d3a4b;
+  justify-content: center;
+  margin-left: 15px;
+  margin-top: -15px;
+  line-height: 10px
+}
+
+wustormalert {
+  position: absolute;
+  margin-top: -40px;
+  margin-left: 15px
 }
