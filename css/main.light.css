@@ -8870,20 +8870,19 @@ wuthunder2 {
   padding-top: 0;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: relative;
   font-family: Arial, Helvetica, sans-serif;
-  width: 6.5em;
+  width: 8.5em;
   height: 1rem;
   font-size: 10px;
   color: #2d3a4b;
   justify-content: center;
-  margin-left: 15px;
-  margin-top: -15px;
+  margin-top: -25px;
   line-height: 10px
 }
 
 wustormalert {
-  position: absolute;
-  margin-top: -40px;
-  margin-left: 15px
+  position: relative;
+  top: -15px;
+  left: 4px
 }

@@ -8634,3 +8634,24 @@ wuuvicon {
   padding-left: 2px;
   padding-right: 2px;
 }
+
+wuthunder2 {
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 8.5em;
+  height: 1rem;
+  font-size: 10px;
+  color: silver;
+  justify-content: center;
+  margin-top: -25px;
+  line-height: 10px
+}
+
+wustormalert {
+  position: relative;
+  top: -15px;
+  left: 4px
+}
