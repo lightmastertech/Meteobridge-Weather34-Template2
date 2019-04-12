@@ -21,7 +21,12 @@
 <div class="weather34darkbrowser" url="Webcam for <?php echo $stationlocation;?>"></div>     
 
   
-<!-- HOMEWEATHER STATION TEMPLATE SIMPLE WEBCAM -add your url as shown below do NOT delete the class='webcam large' !!! -->
+<!-- HOMEWEATHER STATION TEMPLATE SIMPLE WEBCAM -add your url as shown below do NOT delete the class='webcam large' !!! 
+	First Option is if you have a single image that is repeated overwritten, second option is if you have timestamped images -->
+
 <img src="<?php echo $webcamurl?>" alt="weathercam" class="webcamlarge">
+
+<!--<img src="<?php //echo $webcamurl?>?v=<?php //echo date('YmdGis');?>" alt="weathercam" class="webcamlarge">-->
+
 </span>
 
