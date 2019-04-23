@@ -144,7 +144,7 @@
 		{
 			// Max Wind Gust
 			type: "splineArea",
-			color:"#F05E40",
+			color:"#ff9350",
 			markerSize:0,
 			showInLegend:true,
 			legendMarkerType: "circle",
