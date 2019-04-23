@@ -84,7 +84,7 @@
 	function drawChart( dataPoints1) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		  animationEnabled: false,
+		  animationEnabled: true,
 		 
 		title: {
             text: "",
@@ -118,6 +118,7 @@
 		titleFontSize: 10,
         titleWrap: false,
 		margin: 10,
+    interval: 'auto',
 		lineThickness: 1,		
 		gridThickness: 1,	
 		gridDashType: "dot",
@@ -142,14 +143,13 @@
 		
 		data: [
 		{
-			//type: "spline",
 			type: "line",
 			color:"#ff8841",
 			markerSize:0,
 			showInLegend:true,
 			legendMarkerType: "circle",
-			lineThickness: 0,
-			markerType: "none",
+			lineThickness: 2,
+			markerType: "circle",
 			name:"Barometer",
 			dataPoints: dataPoints1,
 			yValueFormatString: "##.## <?php echo $pressureunit ;?>",

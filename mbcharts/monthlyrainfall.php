@@ -29,9 +29,9 @@
 	else if ($restoftheworld == true && $windunit == 'mph') {$conv= '0.0393701';}
 	else $conv;
 	$interval = 1;
-	if ($windunit == 'mph') {$interval= '0.5';}
+	/*if ($windunit == 'mph') {$interval= '0.5';}
 	else if ($windunit == 'm/s') {$interval= '1';}
-	else if ($windunit == 'km/h'){$interval= '1';}
+	else if ($windunit == 'km/h'){$interval= '1';}*/
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -88,7 +88,7 @@
 	function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		  animationEnabled: false,
+		  animationEnabled: true,
 		 
 		title: {
             text: "",
@@ -122,7 +122,7 @@
 		titleFontSize: 10,
         titleWrap: false,
 		margin: 10,
-		interval:<?php echo $interval;?>,
+		interval: 'auto',
 		lineThickness: 1,		
 		gridThickness: 1,	
 		gridDashType: "dot",	
@@ -133,7 +133,7 @@
 		titleFontFamily: "arial",
 		labelFontFamily: "arial",
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(1) + " <?php echo $rainunit ;?> " ;  
+        return e.value .toFixed(2) + " <?php echo $rainunit ;?> " ;  
          },		
 			 
 		 
@@ -148,7 +148,7 @@
 		
 		data: [
 		{
-			//Barometer
+			// Rainfall
 			type: "column",
 			color:"#00A4B4",
 			markerSize:0,

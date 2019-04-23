@@ -80,7 +80,7 @@
 		function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		 animationEnabled: false,
+		 animationEnabled: true,
 		
 		
 		title: {
@@ -117,6 +117,7 @@
 		titleFontSize: 10,
         titleWrap: false,
 		margin: 10,
+    interval: 'auto',
 		lineThickness: 1,		
 		gridThickness: 1,		
         includeZero: false,
@@ -142,8 +143,7 @@
 		
 		data: [
 		{
-			//type: "spline",
-			type: "column",
+			type: "splineArea",
 			color:"#ff9350",
 			markerSize:0,
 			showInLegend:true,
@@ -157,7 +157,7 @@
 		},
 		{
 			
-			type: "line",
+			type: "splineArea",
 			color:"#00A4B4",
 			markerSize:0,
 			showInLegend:true,

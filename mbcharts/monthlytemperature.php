@@ -23,10 +23,10 @@
 	else if ($windunit == 'mph') {$conv= '(1.8) +32';}
 	else if ($windunit == 'm/s') {$conv= '1';}
 	else if ($windunit == 'km/h'){$conv= '1';}
-	$interval = 1;
+	/*$interval = 1;
 	if ($windunit == 'mph') {$interval= '0.5';}
 	else if ($windunit == 'm/s') {$interval= '1';}
-	else if ($windunit == 'km/h'){$interval= '1';}
+	else if ($windunit == 'km/h'){$interval= '1';}*/
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -79,7 +79,7 @@
 		function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		 animationEnabled: false,
+		 animationEnabled: true,
 		
 		
 		title: {
@@ -112,25 +112,25 @@
 			},
 			
 		axisY:{
-		title: "Temperature (°<?php echo $tempunit ;?>) Recorded",
-		titleFontColor: "#555",
-		titleFontSize: 10,
-        titleWrap: false,
-		margin: 10,
-		lineThickness: 1,		
-		gridThickness: 1,	
-		gridDashType: "dot",	
-        includeZero: false,		
-		gridColor: "#aaa",
-		labelFontSize: 11,
-		labelFontColor:' #555',
-		titleFontFamily: "arial",
-		labelFontFamily: "arial",
-		labelFormatter: function ( e ) {
+      title: "Temperature (°<?php echo $tempunit ;?>) Recorded",
+      titleFontColor: "#555",
+      titleFontSize: 10,
+      titleWrap: false,
+      margin: 10,
+      interval: 'auto',
+      lineThickness: 1,		
+      gridThickness: 1,	
+      gridDashType: "dot",	
+      includeZero: false,		
+      gridColor: "#aaa",
+      labelFontSize: 11,
+      labelFontColor:' #555',
+      titleFontFamily: "arial",
+      labelFontFamily: "arial",
+      labelFormatter: function ( e ) {
         return e.value .toFixed(0) + " °<?php echo $tempunit ;?> " ;  
-         },		 
-		 
-      },
+      },		 
+    },
 	  
 	  legend:{
       fontFamily: "arial",
@@ -141,8 +141,7 @@
 		
 		data: [
 		{
-			//type: "spline",
-			type: "column",
+			type: "splineArea",
 			color:"#ff9350",
 			markerSize:0,
 			showInLegend:true,
@@ -152,11 +151,9 @@
 			name:" Hi Temp",
 			dataPoints: dataPoints1,
 			yValueFormatString: "#0.# °<?php echo $tempunit ;?>",
-			
 		},
 		{
-			
-			type: "line",
+			type: "splineArea",
 			color:"#00A4B4",
 			markerSize:0,
 			showInLegend:true,
@@ -166,7 +163,6 @@
 			name:" Lo Temp",
 			dataPoints: dataPoints2,
 			yValueFormatString: "#0.# °<?php echo $tempunit ;?>",
-			
 		}
 
 		]

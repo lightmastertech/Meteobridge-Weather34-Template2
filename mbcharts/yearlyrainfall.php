@@ -28,10 +28,10 @@
 	else if ($restoftheworld == true && $metric == 'false') {$conv= '0.0393701';}
 	else if ($restoftheworld == true && $windunit == 'mph') {$conv= '0.0393701';}
 	else $conv;
-	$interval = 1;
+	/*$interval = 1;
 	if ($windunit == 'mph') {$interval= '0.5';}
 	else if ($windunit == 'm/s') {$interval= '1';}
-	else if ($windunit == 'km/h'){$interval= '1';}
+	else if ($windunit == 'km/h'){$interval= '1';}*/
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -87,7 +87,7 @@
 	function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		  animationEnabled: false,
+		  animationEnabled: true,
 		 
 		title: {
             text: "",
@@ -125,7 +125,7 @@
 		lineThickness: 1,		
 		gridThickness: 1,
 		gridDashType: "dot",
-		interval:<?php echo $interval ;?>,		
+		interval: 'auto',		
         includeZero: false,
 		gridColor: "#aaa",
 		labelFontSize: 11,
@@ -133,7 +133,7 @@
 		titleFontFamily: "arial",
 		labelFontFamily: "arial",
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(0) + " <?php echo $rainunit ;?> " ;  
+        return e.value .toFixed(2) + " <?php echo $rainunit ;?> " ;  
          },		
 			 
 		 

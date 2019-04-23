@@ -82,7 +82,7 @@
 	function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		  animationEnabled: false,
+		  animationEnabled: true,
 		 
 		title: {
             text: "",
@@ -142,27 +142,27 @@
 		
 		data: [
 		{
-			//wind gust
-			type: "column",
+			// Max Wind Gust
+			type: "splineArea",
 			color:"#F05E40",
 			markerSize:0,
 			showInLegend:true,
 			legendMarkerType: "circle",
-			lineThickness: 0,
-			markerType: "none",
+			lineThickness: 2,
+			markerType: "circle",
 			name:"Max Wind Gust",
 			dataPoints: dataPoints1,
 			yValueFormatString:"#0.# <?php echo $windunit ;?>",
 		},
 		{
-			// wind speed
-			type: "column",			
+			// Average Wind Speed
+			type: "splineArea",
 			color:"#00A4B4",
 			markerSize:0,
 			showInLegend:true,
 			legendMarkerType: "circle",
 			lineThickness: 2,
-			markerType: "none",
+			markerType: "circle",
 			name:"Avg Wind Speed",
 			dataPoints: dataPoints2,
 			yValueFormatString:"#0.# <?php echo $windunit ;?>",

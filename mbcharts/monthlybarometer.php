@@ -24,9 +24,9 @@
 	else if ($windunit == 'm/s') {$conv= '1';}
 	else if ($windunit == 'km/h'){$conv= '1';}
 	$int = 1;
-	if ($pressureunit == 'mb') {$int= '5';}
-	else if ($pressureunit == 'hPa') {$int= '5';}
-	else if ($pressureunit == 'inHg') {$int= '0.25';}
+	if ($pressureunit == 'mb') {$int= 5;}
+	else if ($pressureunit == 'hPa') {$int= 5;}
+	else if ($pressureunit == 'inHg') {$int= 0.25;}
 	
 	$limit = '0';
 	if ($windunit == 'mph') {$limit= '20';}
@@ -88,7 +88,7 @@
 	function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		  animationEnabled: false,
+		  animationEnabled: true,
 		 
 		title: {
             text: "",
@@ -127,7 +127,7 @@
 		lineThickness: 1,		
 		gridThickness: 1,
 		gridDashType: "dot",
-		interval:<?php echo $int;?>,		
+		interval: '<?php echo $int;?>',
         includeZero: false,
 		gridColor: "#aaa",
 		labelFontSize: 11,
@@ -135,7 +135,7 @@
 		titleFontFamily: "arial",
 		labelFontFamily: "arial",
 		labelFormatter: function ( e ) {
-        return e.value .toFixed(2) + " <?php echo $pressureunit ;?> " ;  
+        return e.value .toFixed(0) + " <?php echo $pressureunit ;?> " ;  
          },		
 			 
 		
@@ -150,27 +150,27 @@
 		
 		data: [
 		{
-			//Barometer
+			// High Barometer
 			type: "spline",
 			color:"#FF8841",
 			markerSize:0,
 			showInLegend:true,
 			legendMarkerType: "circle",
-			lineThickness: 0,
-			markerType: "none",
+			lineThickness: 2,
+			markerType: "circle",
 			name:"Hi Barometer",
 			dataPoints: dataPoints1,
 			yValueFormatString:"##.## <?php echo $pressureunit ;?>",
 		},
 		{
-			// not used
+			// Low Barometer
 			type: "spline",			
 			color:"#00A4B4",
 			markerSize:0,
 			showInLegend:true,
 			legendMarkerType: "circle",
-			lineThickness: 0,
-			markerType: "none",
+			lineThickness: 2,
+			markerType: "circle",
 			name:"Lo Barometer",
 			dataPoints: dataPoints2,
 			yValueFormatString:"##.## <?php echo $pressureunit ;?>",

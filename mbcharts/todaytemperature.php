@@ -22,11 +22,11 @@
 	else if ($windunit == 'mph') {$conv= '(1.8) +32';}
 	else if ($windunit == 'm/s') {$conv= '1';}
 	else if ($windunit == 'km/h'){$conv= '1';}
-	$interval = 1;
+	//$interval = 1;
 	if ($uk == true && $windunit == 'mph') {$conv= '1';}
-	if ($windunit == 'mph') {$interval= '0.5';}
+	/*if ($windunit == 'mph') {$interval= '0.5';}
 	else if ($windunit == 'm/s') {$interval= '1';}
-	else if ($windunit == 'km/h'){$interval= '1';}
+	else if ($windunit == 'km/h'){$interval= '1';}*/
     echo '
 <!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -83,7 +83,7 @@
 		function drawChart( dataPoints1 , dataPoints2 ) {
 		var chart = new CanvasJS.Chart("chartContainer", {
 		 backgroundColor: "#fff",
-		 animationEnabled: false,
+		 animationEnabled: true,
 		
 		title: {
             text: " ",
@@ -129,7 +129,7 @@
 		titleFontSize: 10,
         titleWrap: false,
 		margin: 10,
-		interval:1,
+		interval: 'auto',
 		//maximum: <?php echo $max ;?>,		
 		lineThickness: 1,		
 		gridThickness: 1,	
