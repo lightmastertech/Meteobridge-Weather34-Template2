@@ -92,3 +92,5 @@ $defaultlanguage   = "en";
 $language    = "en";
 $password    = "";
 $flag   = "en";
+
+$testvariable = "Having this variable in settings1.php means that index.php did correctly copy over missing variables. Also make sure that there are now no blank lines in settings1.php and that your previous settings are still set.";
